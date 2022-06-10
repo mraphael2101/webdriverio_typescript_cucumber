@@ -1,0 +1,26 @@
+{
+    "name": "wdio-cucumber-e2e-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "wdio": "wdio run test/wdio.conf.ts"
+    },
+    "keywords": [
+        "wdio",
+        "cucumber"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^7.19.7",
+        "@wdio/cucumber-framework": "^7.19.7",
+        "@wdio/local-runner": "^7.19.7",
+        "@wdio/spec-reporter": "^7.19.7",
+        "chromedriver": "^101.0.0",
+        "ts-node": "^10.8.0",
+        "typescript": "^4.7.2",
+        "wdio-chromedriver-service": "^7.3.2"
+    }
+}

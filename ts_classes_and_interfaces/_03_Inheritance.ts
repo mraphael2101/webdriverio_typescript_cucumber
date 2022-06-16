@@ -25,3 +25,6 @@ class ITOffice extends Office {
 let myOffice = new Office("Catalin's office", 40);
 
 let myITOffice = new ITOffice("Mark's office", 20, true, ' Robert -> Admin Officer');
+
+
+// NOTE In JavaScript the rules for inheritance in relation to classes and interfaces are the same as Java and C#

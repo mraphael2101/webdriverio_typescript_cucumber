@@ -17,7 +17,7 @@ accounting.describe();
 
 
 
-/** Example of how to replacate an object and access it's instance variable.
+/** Example of how to replicate an object and access its instance variable.
  *  Note that the method signature has the argument this: BusinessUnit */ 
  class BusinessUnit {
     name: string;

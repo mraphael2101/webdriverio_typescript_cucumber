@@ -1,7 +1,7 @@
 class Home {
     
     private name: string;
-    private tenants: string[] = [];
+    private readonly tenants: string[] = [];
 
     constructor(name: string, tenants: string[]) {
         this.name = name;

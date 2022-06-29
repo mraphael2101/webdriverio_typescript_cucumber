@@ -4,13 +4,14 @@
             "node",
             "webdriverio/async",
             "@wdio/cucumber-framework",
-            "expect-webdriverio",
+            "expect-webdriverio"
         ],
-        "target": "ES5",
+        "target": "es6",
+        "experimentalDecorators": true,
         "module": "CommonJS",
         "outDir": "./dist",
         "strict": true
-    }, 
+    },
     "include": ["*.ts"],
     "exclude": []
 }

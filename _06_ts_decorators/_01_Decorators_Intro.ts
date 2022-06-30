@@ -2,7 +2,7 @@
 * when you use that constructor declaration to instantiate an object */
 
 
-// This is a decorator function which prints the output from the constructor
+// This is namespace_features decorator function which prints the output from the constructor
 // Decorators usually start with an upper case letter
 function Logger(constructor: Function) {
     console.log("Logging...");
@@ -14,7 +14,7 @@ class Person {
     name = 'Max';
 
     constructor() {
-        console.log('Creating a person object...');
+        console.log('Creating namespace_features person object...');
     }
 }
 

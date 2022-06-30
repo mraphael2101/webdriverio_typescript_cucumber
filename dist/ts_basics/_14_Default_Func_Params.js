@@ -1,6 +1,0 @@
-// Example 1: Arrow Function with a default param value 1 for attr2
-// Default parameters should come last
-const additionFunc1 = (attr1, attr2 = 1) => {
-    return attr1 + attr2;
-};
-console.log(additionFunc1(2));

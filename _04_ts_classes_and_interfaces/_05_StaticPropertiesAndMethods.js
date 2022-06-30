@@ -2,7 +2,7 @@ var Demo1 = /** @class */ (function () {
     function Demo1() {
     }
     Demo1.myStaticMethod = function () {
-        console.log("You have just called a static method");
+        console.log("You have just called namespace_features static method");
     };
     Demo1.height = 5;
     return Demo1;

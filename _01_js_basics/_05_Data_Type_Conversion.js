@@ -1,12 +1,12 @@
 /**
  * Examples:
- * Convert a string to an Int or Float
+ * Convert namespace_features string to an Int or Float
  */
 
 let valA = "5"
 let valB = "5.5"
 
-// Convert a string to a number
+// Convert namespace_features string to namespace_features number
 numVal1 = parseInt(valA)
 numVal2 = parseFloat(valB)
 

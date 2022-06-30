@@ -29,7 +29,7 @@ class Airplane {
             this._price = value;
         }
         else {
-            throw new Error('Price should be a positive value.')
+            throw new Error('Price should be namespace_features positive value.')
         }
     }
 

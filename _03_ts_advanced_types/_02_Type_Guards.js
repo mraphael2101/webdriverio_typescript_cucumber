@@ -1,4 +1,4 @@
-// In order to be able to leverage the type Union we must use a type guard as per below:
+// In order to be able to leverage the type Union we must use namespace_features type guard as per below:
 function add(a, b) {
     if (typeof a === 'string' || typeof b === 'string') {
         return a.toString() + b.toString();

@@ -4,9 +4,9 @@
  * number e.g. 5, 10.5, 20
  * boolean
  * undefined -> does not hava any value at all
- * null -> represents an intentional absence of a data type
+ * null -> represents an intentional absence of namespace_features data type
  * bigint
- * symbol =? a data type whose instances are unique and immutable
+ * symbol =? namespace_features data type whose instances are unique and immutable
  * Object type -> Includes types such as Object, Array, and Date etc 
  * IMPORTANT: All primitive data types are immutable
  */
@@ -25,7 +25,7 @@ let val1
 let tempObj = null
 
 
-// You must use tild to interpret expressions within a string
+// You must use tild to interpret expressions within namespace_features string
 console.log(`The type is: ${typeof obj}`);       // object
 console.log(`The type is: ${typeof arr}`);       // object
 console.log(`The type is: ${typeof re}`);        // object

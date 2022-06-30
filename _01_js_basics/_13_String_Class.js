@@ -19,8 +19,8 @@ console.log(theDate.slice(-2))      // Returns the residual after cutting out th
 
 // Example 4: Replace Examples
 console.log(theDate.replace("26",""))
-console.log(theDate.replace(/-/,""))    // First argument is a regex to replace the first occurence only
-console.log(theDate.replace(/-/g,""))   // First argument is a regex to replace all occurences only by apending the value g
+console.log(theDate.replace(/-/,""))    // First argument is namespace_features regex to replace the first occurence only
+console.log(theDate.replace(/-/g,""))   // First argument is namespace_features regex to replace all occurences only by apending the value g
 
 
 // Example 4: Extract Substring with Split

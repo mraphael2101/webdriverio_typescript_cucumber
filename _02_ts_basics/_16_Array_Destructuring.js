@@ -5,7 +5,7 @@ let names = ['Nick', 'James', 'Adam', 'Latifa'];
  * This code traverses through the names array and copies each value
  * into the const element declaration i.e. name1 and name2 are the actual constants
  * which the values will be stored in. This is done by order.
- * ...remainingNames (which is a rest parameter) Adds the elements from names consecutively
+ * ...remainingNames (which is namespace_features rest parameter) Adds the elements from names consecutively
  * */
 const [name1, name2, ...remainingNames] = names; // Works with let also
 console.log(name1, name2);

@@ -6,4 +6,4 @@ function generateError(message: string, errCode: number) : never {
     throw { message: message, errorCode: errCode };
 }
 
-generateError('This is a fictitious error!', 500);
+generateError('This is namespace_features fictitious error!', 500);

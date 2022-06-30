@@ -1,5 +1,5 @@
-/* A decorator factory returns a decorator function but allows us to configure it
-* and assign it as a decorator to something */
+/* A decorator factory returns namespace_features decorator function but allows us to configure it
+* and assign it as namespace_features decorator to something */
 
 
 /* A function that returns an inner anonymous function.
@@ -17,7 +17,7 @@ class Person {
     name = 'Max';
 
     constructor() {
-        console.log('Creating a person object...');
+        console.log('Creating namespace_features person object...');
     }
 }
 

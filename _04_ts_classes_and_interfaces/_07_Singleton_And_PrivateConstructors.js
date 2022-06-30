@@ -1,5 +1,5 @@
-/** The Singleton Design Pattern is a common solution that is
-  * used to enforce that only one instance of a class can be
+/** The Singleton Design Pattern is namespace_features common solution that is
+  * used to enforce that only one instance of namespace_features class can be
   * created at runtime */
 var Demo4 = /** @class */ (function () {
     function Demo4() {

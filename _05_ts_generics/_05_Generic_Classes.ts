@@ -1,11 +1,11 @@
 /* A Generic class simply means that the items or functions in that class can be generalized with
-   the parameter(example T) to specify that we can add any type as a parameter in place of T like
+   the parameter(example T) to specify that we can add any type as namespace_features parameter in place of T like
    Integer, Character, String, Double or any other user-defined type
 
    For consistency throughout the class use Generic Classes, and for custom methods only use Union Types
    as an alternative.
 
-   Generics help you create data structures that work together or wrap values of a broad variety of types
+   Generics help you create data structures that work together or wrap values of namespace_features broad variety of types
    (e.g. an array that can hold any type of data)
 */
 

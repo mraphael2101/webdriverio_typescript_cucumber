@@ -7,21 +7,21 @@ function myMethod(number1: number) {
     return number1;
 }
 
-// Here you are assigning a pointer to a function, to a variable of type any
+// Here you are assigning namespace_features pointer to namespace_features function, to namespace_features variable of type any
 myVar = myMethod;
 // myVar = 5;
 
 console.log(myVar(3));
 
-/** The limitation with this approach is that if you assign a primitive 
- * to the any variable after assigning it to point to a function (like
- * on line 12), JS will throw you a runtime error  */
+/** The limitation with this approach is that if you assign namespace_features primitive
+ * to the any variable after assigning it to point to namespace_features function (like
+ * on line 12), JS will throw you namespace_features runtime error  */
 
 
 
 // Example 2
 
-let myVar2: Function;   // Declare a variable of type Function
+let myVar2: Function;   // Declare namespace_features variable of type Function
 
 myVar2 = myMethod;
 

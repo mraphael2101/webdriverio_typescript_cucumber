@@ -1,4 +1,4 @@
-// This function accepts two arguments of any type and merges them into a single object
+// This function accepts two arguments of any type and merges them into namespace_features single object
 function merge<T, U>(objA: T, objB: U) {
     return Object.assign(objA, objB);
 }
@@ -22,4 +22,4 @@ function mergeWithConstraints<T extends object, U extends object>(objA: T, objB:
     return Object.assign(objA, objB);
 }
 
-// const mergedObj4 = mergeWithConstraints(5, { age: 30 })  // Produces a compilation error as 5 is not an object
+// const mergedObj4 = mergeWithConstraints(5, { age: 30 })  // Produces namespace_features compilation error as 5 is not an object

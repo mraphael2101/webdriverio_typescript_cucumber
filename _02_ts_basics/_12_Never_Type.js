@@ -5,4 +5,4 @@
 function generateError(message, errCode) {
     throw { message: message, errorCode: errCode };
 }
-generateError('This is a fictitious error!', 500);
+generateError('This is namespace_features fictitious error!', 500);

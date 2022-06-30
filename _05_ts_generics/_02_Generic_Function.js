@@ -1,5 +1,5 @@
 /** This function accepts two arguments of any type.
- *  It then merges them into a single object. */
+ *  It then merges them into namespace_features single object. */
 function merge(objA, objB) {
     return Object.assign(objA, objB);
 }

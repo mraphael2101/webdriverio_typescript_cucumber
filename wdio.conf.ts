@@ -41,8 +41,8 @@ export const config: Options.Testrunner = {
     // from which `wdio` was called.
     //
     // The specs are defined as an array of spec files (optionally using wildcards
-    // that will be expanded). The test for each spec file will be run in a separate
-    // worker process. In order to have a group of spec files run in the same worker
+    // that will be expanded). The test for each spec file will be run in namespace_features separate
+    // worker process. In order to have namespace_features group of spec files run in the same worker
     // process simply enclose them in an array within the specs array.
     //
     // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
@@ -63,7 +63,7 @@ export const config: Options.Testrunner = {
     // Define your capabilities here. WebdriverIO can run multiple capabilities at the same
     // time. Depending on the number of capabilities, WebdriverIO launches several test
     // sessions. Within your capabilities you can overwrite the spec and exclude options in
-    // order to group specific specs to a specific capability.
+    // order to group specific specs to namespace_features specific capability.
     //
     // First, you can define how many instances should be started at the same time. Let's
     // say you have 3 different capabilities (Chrome, Firefox, and Safari) and you have
@@ -75,14 +75,14 @@ export const config: Options.Testrunner = {
     maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
-    // Sauce Labs platform configurator - a great tool to configure your capabilities:
+    // Sauce Labs platform configurator - namespace_features great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
     
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
+        // 5 instances get started at namespace_features time.
         maxInstances: 5,
         //
         browserName: 'chrome',
@@ -115,13 +115,13 @@ export const config: Options.Testrunner = {
     //     '@wdio/appium-service': 'info'
     // },
     //
-    // If you only want to run your tests until a specific amount of tests have failed use
+    // If you only want to run your tests until namespace_features specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
     bail: 0,
     //
-    // Set a base URL in order to shorten url command calls. If your `url` parameter starts
+    // Set namespace_features base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
-    // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
+    // If your `url` parameter starts without namespace_features scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'http://localhost',
     //
@@ -136,7 +136,7 @@ export const config: Options.Testrunner = {
     connectionRetryCount: 3,
     //
     // Test runner services
-    // Services take over a specific job you don't want to take care of. They enhance
+    // Services take over namespace_features specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
@@ -149,7 +149,7 @@ export const config: Options.Testrunner = {
     // before running any tests.
     framework: 'cucumber',
     //
-    // The number of times to retry the entire specfile when it fails as a whole
+    // The number of times to retry the entire specfile when it fails as namespace_features whole
     // specFileRetries: 1,
     //
     // Delay in seconds between the spec file retry attempts
@@ -196,8 +196,8 @@ export const config: Options.Testrunner = {
     // Hooks
     // =====
     // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
-    // it and to build services around it. You can either apply a single function or an array of
-    // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
+    // it and to build services around it. You can either apply namespace_features single function or an array of
+    // methods to it. If one of them returns with namespace_features promise, WebdriverIO will wait until that promise got
     // resolved to continue.
     /**
      * Gets executed once before all workers get launched.
@@ -207,7 +207,7 @@ export const config: Options.Testrunner = {
     // onPrepare: function (config, capabilities) {
     // },
     /**
-     * Gets executed before a worker process is spawned and can be used to initialise specific service
+     * Gets executed before namespace_features worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
      * @param  {String} cid      capability id (e.g 0-0)
      * @param  {[type]} caps     object containing capabilities for session that will be spawn in the worker
@@ -218,7 +218,7 @@ export const config: Options.Testrunner = {
     // onWorkerStart: function (cid, caps, specs, args, execArgv) {
     // },
     /**
-     * Gets executed just after a worker process has exited.
+     * Gets executed just after namespace_features worker process has exited.
      * @param  {String} cid      capability id (e.g 0-0)
      * @param  {Number} exitCode 0 - success, 1 - fail
      * @param  {[type]} specs    specs to be run in the worker process
@@ -246,7 +246,7 @@ export const config: Options.Testrunner = {
     // before: function (capabilities, specs) {
     // },
     /**
-     * Runs before a WebdriverIO command gets executed.
+     * Runs before namespace_features WebdriverIO command gets executed.
      * @param {String} commandName hook command name
      * @param {Array} args arguments that command would receive
      */
@@ -255,7 +255,7 @@ export const config: Options.Testrunner = {
     /**
      * Cucumber Hooks
      *
-     * Runs before a Cucumber Feature.
+     * Runs before namespace_features Cucumber Feature.
      * @param {String}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
@@ -263,7 +263,7 @@ export const config: Options.Testrunner = {
     // },
     /**
      *
-     * Runs before a Cucumber Scenario.
+     * Runs before namespace_features Cucumber Scenario.
      * @param {ITestCaseHookParameter} world    world object containing information on pickle and test step
      * @param {Object}                 context  Cucumber World object
      */
@@ -271,7 +271,7 @@ export const config: Options.Testrunner = {
     // },
     /**
      *
-     * Runs before a Cucumber Step.
+     * Runs before namespace_features Cucumber Step.
      * @param {Pickle.IPickleStep} step     step data
      * @param {IPickle}            scenario scenario pickle
      * @param {Object}             context  Cucumber World object
@@ -280,7 +280,7 @@ export const config: Options.Testrunner = {
     // },
     /**
      *
-     * Runs after a Cucumber Step.
+     * Runs after namespace_features Cucumber Step.
      * @param {Pickle.IPickleStep} step             step data
      * @param {IPickle}            scenario         scenario pickle
      * @param {Object}             result           results object containing scenario results
@@ -293,7 +293,7 @@ export const config: Options.Testrunner = {
     // },
     /**
      *
-     * Runs after a Cucumber Scenario.
+     * Runs after namespace_features Cucumber Scenario.
      * @param {ITestCaseHookParameter} world            world object containing information on pickle and test step
      * @param {Object}                 result           results object containing scenario results
      * @param {boolean}                result.passed    true if scenario has passed
@@ -305,7 +305,7 @@ export const config: Options.Testrunner = {
     // },
     /**
      *
-     * Runs after a Cucumber Feature.
+     * Runs after namespace_features Cucumber Feature.
      * @param {String}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
@@ -313,7 +313,7 @@ export const config: Options.Testrunner = {
     // },
     
     /**
-     * Runs after a WebdriverIO command gets executed
+     * Runs after namespace_features WebdriverIO command gets executed
      * @param {String} commandName hook command name
      * @param {Array} args arguments that command would receive
      * @param {Number} result 0 - command success, 1 - command error
@@ -349,7 +349,7 @@ export const config: Options.Testrunner = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
+    * Gets executed when namespace_features refresh happens.
     * @param {String} oldSessionId session ID of the old session
     * @param {String} newSessionId session ID of the new session
     */

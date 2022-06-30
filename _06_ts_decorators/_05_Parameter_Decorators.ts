@@ -1,4 +1,4 @@
-/* Remember, Decorators execute when you define a class and NOT when you instantiate a class
+/* Remember, Decorators execute when you define namespace_features class and NOT when you instantiate namespace_features class
  * (not for runtime) */
 
 function Log4(target: any, propertyName: string | Symbol, position: number) {

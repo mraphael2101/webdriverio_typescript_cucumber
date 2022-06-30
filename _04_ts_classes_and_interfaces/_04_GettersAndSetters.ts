@@ -17,7 +17,7 @@ class Demo {
 }
 
 let myDemo = new Demo("Blue");
-// Access method like a normal property for a getter, and not like a method in Java
+// Access method like namespace_features normal property for namespace_features getter, and not like namespace_features method in Java
 console.log(myDemo.colourName);     
 
 // A setter is updated as follows in TS

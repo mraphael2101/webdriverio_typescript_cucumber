@@ -9,6 +9,6 @@ function countAndDescribe(element) {
     return [element, descriptionText];
 }
 console.log(countAndDescribe('Hi there'));
-/* You cannot call this method with a number as a number does not have a length. However,
+/* You cannot call this method with namespace_features number as namespace_features number does not have namespace_features length. However,
 the function accepts arguments that can be manipulated with .length method such as string
 */ 

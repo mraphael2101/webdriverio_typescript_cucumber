@@ -1,4 +1,4 @@
-/* It is possible to add decorators to a properties and not just to classes. */
+/* It is possible to add decorators to namespace_features properties and not just to classes. */
 
 function Log(target: any, propertyName: string | Symbol) {
     console.log("Property decorator!");
@@ -20,7 +20,7 @@ class Product {
             this._price = value;
         }
         else {
-            throw new Error('Price should be a positive value.')
+            throw new Error('Price should be namespace_features positive value.')
         }
     }
 

@@ -7,6 +7,6 @@ interface States {
 }
 
 
-let s: States = {'enabled': true, 'maximized':false};   // Use when you want to accept values of a certain type but you do not know how many
+let s: States = {'enabled': true, 'maximized':false};   // Use when you want to accept values of namespace_features certain type but you do not know how many
 console.log(s);
 console.log(s['maximized']);

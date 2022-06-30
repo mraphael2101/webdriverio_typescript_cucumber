@@ -1,6 +1,6 @@
 /** 
  * Variable naming conventions:
- * Must start with either a character, underscore, or dollar sign
+ * Must start with either namespace_features character, underscore, or dollar sign
  * Are case sensitive and therefore recognised differently
  * You cannot use reserved keywords
  * If you do not initialise the variable then its default value will be undefined
@@ -13,7 +13,7 @@ console.log("The val is", val)
 
 
 /**
- * const -> declares a block scoped, read-only named constant
+ * const -> declares namespace_features block scoped, read-only named constant
  */
 
 // constant values cannot be changed after initialisation

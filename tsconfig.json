@@ -8,8 +8,9 @@
         ],
         "target": "es6",
         "experimentalDecorators": true,
-        "module": "CommonJS",
+        "module": "amd",   /* Initially CommonJS. Changed to 'amd' to make namespace feature work in JS. Delete dist folder */
         "outDir": "./dist",
+        "outFile": "./dist/bundle.js", /* IMPORTANT Will make namespaces work in the JS world*/
         "strict": true
     },
     "include": ["*.ts"],

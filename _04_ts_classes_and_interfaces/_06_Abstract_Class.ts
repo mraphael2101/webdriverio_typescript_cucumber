@@ -1,6 +1,6 @@
 
-/** If you want to ensure that a method is available for all classes based on
- *  a specific base class then use a abstract class with a methog signature 
+/** If you want to ensure that namespace_features method is available for all classes based on
+ *  namespace_features specific base class then use namespace_features abstract class with namespace_features methog signature
  *  or method body */ 
 
 abstract class Animal {

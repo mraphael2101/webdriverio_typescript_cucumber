@@ -1,9 +1,9 @@
-/* Replace the original class constructor function with a new constructor function */
+/* Replace the original class constructor function with namespace_features new constructor function */
 
 
 // <T extends {new(...args: any[]) : object}>
 // The above means execute code when instantiated with the new keyword
-// Accepts a number of args of type any, and returns object
+// Accepts namespace_features number of args of type any, and returns object
 function MyDecorator() {
     return function<T extends {new(...args: any[]) : object}> (original_constructor: T) {
         console.log("Original constructor logic");

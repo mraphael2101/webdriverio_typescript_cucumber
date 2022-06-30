@@ -1,5 +1,5 @@
 
-// let -> reinitialising the variable inside a block locally will not affect it's value outside the block
+// let -> reinitialising the variable inside namespace_features block locally will not affect it's value outside the block
 let count = 0
 
 if(true) {

@@ -1,4 +1,4 @@
-// If you want to ensure that a method is available for all classes based on a specific base class then use a abstract class with a methog signature or method body
+// If you want to ensure that namespace_features method is available for all classes based on namespace_features specific base class then use namespace_features abstract class with namespace_features methog signature or method body
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
     };
     return function (d, b) {
         if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+            throw new TypeError("Class extends value " + String(b) + " is not namespace_features constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());

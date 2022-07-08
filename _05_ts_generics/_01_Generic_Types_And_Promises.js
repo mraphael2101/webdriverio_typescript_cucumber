@@ -12,7 +12,7 @@ var names = []; // this syntax is the same as string[] in TS
 var promise = new Promise(function (resolve, reject) {
     setTimeout(function () {
         resolve(10);
-        console.log('promise executed successfully');
+        console.log('promise executed successfully!');
     }, 2000);
 });
 // Call it like this

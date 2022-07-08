@@ -3,16 +3,17 @@
         "types": [
             "node",
             "webdriverio/async",
+            "@wdio/jasmine-framework",
             "@wdio/cucumber-framework",
-            "expect-webdriverio"
+            "expect-webdriverio",
         ],
-        "target": "es6",
+        "target": "ES2019",
         "experimentalDecorators": true,
-        "module": "amd",   /* Initially CommonJS. Changed to 'amd' to make namespace feature work in JS. Delete dist folder */
+        "module": "CommonJS",   /* Initially CommonJS. Changed to 'amd' to make namespace feature work in JS. Delete dist folder */
         "outDir": "./dist",
-        "outFile": "./dist/bundle.js", /* IMPORTANT Will make namespaces work in the JS world*/
+        /*"outFile": "./dist/bundle.js", // IMPORTANT Will make namespaces work in the JS world*/
         "strict": true
     },
-    "include": ["*.ts"],
+    "include": ["./test/**/*.ts"],
     "exclude": []
 }

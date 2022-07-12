@@ -1,7 +1,7 @@
 import {Options} from "@wdio/types";
 
-//export const config: Options.Testrunner = {
-export const config: WebdriverIO.Config = {
+export const config: Options.Testrunner = {
+//export const config: WebdriverIO.Config = {
     capabilities: [{
         browserName: 'chrome',
         maxInstances: 1,
@@ -15,7 +15,10 @@ export const config: WebdriverIO.Config = {
         './test/**/*.feature'
     ],
     services: ['chromedriver'],
+    baseUrl: 'http://www.google.com',
     framework: 'cucumber',
+    waitforTimeout: 10000,
+    //reporters:['spec',['allure', {outputDir: 'allure-results'}]],
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {

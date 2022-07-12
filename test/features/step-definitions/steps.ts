@@ -7,15 +7,17 @@ const pages = {
     login: LoginPage
 }
 
-//await browser.url("https://www.google.com");
-//await browser.debug();
-
-//Given('I am on the login page', async function (page) {
-//    await pages[page].open()
-//});
-
+//Given(/^I am on the login page$/, async function (page) {
 Given(/^I am on the login page$/, async function () {
     console.log("hello")
+    //await pages[page].open()
+
+    await browser.url("https://www.google.com")
+        .then(async function () {
+            const result = await browser.getUrl();
+            console.log("THE URL IS : " + result);
+    })
+    browser.debug();
 });
 
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {

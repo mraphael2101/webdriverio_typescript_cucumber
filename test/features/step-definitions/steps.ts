@@ -16,8 +16,9 @@ Given(/^I am on the login page$/, async function () {
         .then(async function () {
             const result = await browser.getUrl();
             console.log("THE URL IS : " + result);
-    })
-    browser.debug();
+    });
+
+    await browser.debug();
 });
 
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {

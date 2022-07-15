@@ -14,7 +14,9 @@ export const config: Options.Testrunner = {
     specs: [
         './test/**/*.feature'
     ],
-    services: ['chromedriver'],
+    services: ['chromedriver', ['selenoid-standalone', { pathToBrowsersConfig: './browsers.json' }]],
+    path: 'wd/hub',
+    //services:['selenoid-standalone', { pathToBrowsersConfig: './browsers.json' }], // path relative to process.cwd()
     baseUrl: 'http://www.google.com',
     framework: 'cucumber',
     waitforTimeout: 10000,

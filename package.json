@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "wdio": "wdio run wdio.conf.ts"
+        "debug": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'",
+        "headless": "export HEADLESS=Y && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'"
     },
     "keywords": [
         "wdio",

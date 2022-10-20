@@ -1,0 +1,45 @@
+
+8
+index.ts,a/1/a123abce010ea7d96fa76c6a9040950b5dac59bc
+N
+_01_js_basics/_01_Variables.js,8/3/83854649d5f8218f8d440529085e9c8ecb29194a
+w
+G_04_ts_classes_and_interfaces/_10_Interfaces_And_Optional_Properties.js,7/0/708eb5ac905eed2a23512b21b2ce0b02f6c9497b
+w
+G_04_ts_classes_and_interfaces/_10_Interfaces_And_Optional_Properties.ts,1/5/15ea0c88c5dfb4f1617aae518ebeab5669a2c289
+^
+._01_js_basics/_08_If_Condition_And_Literals.js,0/d/0d37599a8093aec9006e9ba3ea8329338e4c0dba
+P
+ _01_js_basics/_15_Collections.js,c/a/cae0ebe43d1343530d5554dccf9c1b426512d200
+W
+'_01_js_basics/_14_Exception_Handling.js,7/c/7c8cdd7c69e150251b3c4417c051cfb2091ab53b
+\
+,_01_js_basics/_04_Vals_That_Eval_To_False.js,d/5/d511c589170d278372206f43fba94a05d63a379c
+U
+%_01_js_basics/_10_Ternary_Operator.js,7/9/79f64f17c47525a6261de7159b96ababc151b77b
+b
+2_04_ts_classes_and_interfaces/_02_Class_Example.ts,5/6/56d1417bb45ce5cc86a177477c640fde143fe04e
+`
+0_04_ts_classes_and_interfaces/_03_Inheritance.ts,9/2/92115bc8e056434bff3b11e31c525b0034b2b326
+‚
+R_07_ts_modules_and_namespaces/namespace_features/example_1/drag-drop-interfaces.ts,5/b/5baec48dcb99d7ace144d5908ae00397ce7147b4
+ƒ
+S_07_ts_modules_and_namespaces/namespace_features/example_2/drag-drop-interfaces2.ts,b/7/b7e1b29650653d1501be6df7e4882d179c75cf85
+…
+U_07_ts_modules_and_namespaces/namespace_features/example_3/components/project-item.ts,4/2/42466a32369ee8aef568152da1cc915afc5656c4
+B
+test/tsconfig.json,e/c/ecaa19a94b7d05c4272340874f2e0b729722d58c
+_
+/_04_ts_classes_and_interfaces/_08_Interfaces.ts,3/3/33ec0905985c2e69c3fcf1f804ee4e803b80d6b1
+W
+'_01_js_basics/_07_Types_Of_Operators.js,c/f/cf67a19c7ae1aa461b9dab257930ec4cbbb3289d
+O
+_01_js_basics/_03_Data_Types.js,4/1/41501511bb37805640b5b2e922be21c61d048df9
+J
+_01_js_basics/_12_Loops.js,b/a/baba262e97eaa95a9c2b8fd53b00ad8070ca2900
+O
+_02_ts_basics/_01_Data_Types.ts,b/c/bcc9c50a555c0d28adb595955b8ff014c0c4928a
+^
+._02_ts_basics/_03_Arrays_And_Tuples_Example.ts,c/f/cf3a4a402d330993e1deff7dc96a4f2019584817
+f
+6_04_ts_classes_and_interfaces/_04_GettersAndSetters.ts,1/c/1c656296f024281f971e376c4ed53c6058e53479

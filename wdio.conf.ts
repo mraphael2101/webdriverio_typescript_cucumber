@@ -14,20 +14,19 @@ export const config: Options.Testrunner = {
         maxInstances: 1,
     }],
     cucumberOpts: {
-        require: ['./test/**/*.ts'],
+        require: ['./test/features/step-definitions/*.ts'],
         strict: false,
         dryRun: false,
     },
     specs: [
-        './test/**/*.feature'
+        './test/features/*.feature'
     ],
-    services: ['chromedriver', ['selenoid-standalone', { pathToBrowsersConfig: './browsers.json' }]],
     path: 'wd/hub',
-    //services:['selenoid-standalone', { pathToBrowsersConfig: './browsers.json' }], // path relative to process.cwd()
     baseUrl: 'http://www.google.com',
     framework: 'cucumber',
+    services: ['chromedriver'],
     waitforTimeout: 10000,
-    //reporters:['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters:['spec',['allure', {outputDir: 'allure-results'}]],
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {

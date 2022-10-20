@@ -3,7 +3,7 @@
 let count = 0
 
 if(true) {
-    let count = 10
+    count = 10
     console.log("The value of count inside the if block: ", count);
 }
 console.log("The value of count outside the if block: ", count);

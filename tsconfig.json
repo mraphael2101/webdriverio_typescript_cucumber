@@ -3,7 +3,6 @@
         "types": [
             "node",
             "webdriverio/async",
-            "@wdio/jasmine-framework",
             "@wdio/cucumber-framework",
             "expect-webdriverio",
         ],
@@ -14,6 +13,6 @@
         /*"outFile": "./dist/bundle.js", // IMPORTANT Will make namespaces work in the JS world*/
         "strict": true
     },
-    "include": ["./test/**/*.ts"],
+    "include": [],
     "exclude": []
 }

@@ -1,10 +1,10 @@
 Feature: The Internet Guinea Pig Website
 
   @wip_unique
-  Scenario Outline: As a user, I can log into the secure area
-
+  Scenario Outline: My first scenario in WebDriverIO
     Given I am on the login page
-    #Then I should see a flash message saying <message>
+    When I do something
+#    Then I should see a flash message saying <message>
 
     Examples:
       | username  | password             | message                        |

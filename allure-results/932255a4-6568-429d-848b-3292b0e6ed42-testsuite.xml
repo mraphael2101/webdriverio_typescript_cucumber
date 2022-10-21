@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666285689719' stop='1666336393867'>
+    <name>The Internet Guinea Pig Website: As a user, I can log into the secure area</name>
+    <title>The Internet Guinea Pig Website: As a user, I can log into the secure area</title>
+    <test-cases>
+        <test-case start='1666285689720' status='passed' stop='1666285689722'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1666285689723' status='broken' stop='1666336393866'>
+            <name>Given I am on the login page</name>
+            <title>Given I am on the login page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps>
+                <step start='1666336393817' status='broken' stop='1666336393866'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='f56c8090-7395-470a-91e7-be791a318730-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>RequestError: write EPIPE</message>
+                <stack-trace>RequestError: write EPIPE
+                    at ClientRequest.&lt;anonymous> (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/got/dist/source/core/index.js:970:111)
+                    at Object.onceWrapper (node:events:642:26)
+                    at ClientRequest.emit (node:events:539:35)
+                    at ClientRequest.emit (node:domain:475:12)
+                    at ClientRequest.origin.emit (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/@szmarczak/http-timer/dist/source/index.js:43:20)
+                    at Socket.socketErrorListener (node:_http_client:454:9)
+                    at Socket.emit (node:events:527:28)
+                    at Socket.emit (node:domain:475:12)
+                    at emitErrorNT (node:internal/streams/destroy:157:8)
+                    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+                    at writevGeneric (node:internal/stream_base_commons:143:3)
+                    at Socket._writeGeneric (node:net:815:11)
+                    at Socket._writev (node:net:824:8)
+                    at doWrite (node:internal/streams/writable:406:12)
+                    at clearBuffer (node:internal/streams/writable:561:5)
+                    at Socket.Writable.uncork (node:internal/streams/writable:348:7)
+                    at ClientRequest._flushOutput (node:_http_outgoing:970:10)
+                    at ClientRequest._flush (node:_http_outgoing:939:22)
+                    at onSocketNT (node:_http_client:826:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1666336393866' status='passed' stop='1666336393867'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

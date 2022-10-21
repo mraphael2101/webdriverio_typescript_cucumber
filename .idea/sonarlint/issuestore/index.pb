@@ -27,8 +27,6 @@ R_07_ts_modules_and_namespaces/namespace_features/example_1/drag-drop-interfaces
 S_07_ts_modules_and_namespaces/namespace_features/example_2/drag-drop-interfaces2.ts,b/7/b7e1b29650653d1501be6df7e4882d179c75cf85
 …
 U_07_ts_modules_and_namespaces/namespace_features/example_3/components/project-item.ts,4/2/42466a32369ee8aef568152da1cc915afc5656c4
-B
-test/tsconfig.json,e/c/ecaa19a94b7d05c4272340874f2e0b729722d58c
 _
 /_04_ts_classes_and_interfaces/_08_Interfaces.ts,3/3/33ec0905985c2e69c3fcf1f804ee4e803b80d6b1
 W
@@ -43,3 +41,54 @@ O
 ._02_ts_basics/_03_Arrays_And_Tuples_Example.ts,c/f/cf3a4a402d330993e1deff7dc96a4f2019584817
 f
 6_04_ts_classes_and_interfaces/_04_GettersAndSetters.ts,1/c/1c656296f024281f971e376c4ed53c6058e53479
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+w
+G.idea/sonarlint/issuestore/1/c/1c656296f024281f971e376c4ed53c6058e53479,b/3/b313eb15e3e843494d8b65f51720f197f346fc95
+w
+G.idea/sonarlint/issuestore/7/0/708eb5ac905eed2a23512b21b2ce0b02f6c9497b,5/c/5c0c843c6ff25e5379095409ad5076cadb797b23
+w
+G.idea/sonarlint/issuestore/c/a/cae0ebe43d1343530d5554dccf9c1b426512d200,3/0/3070d750dbb310d1515f14d995713f48ba98478b
+\
+,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
+w
+G.idea/sonarlint/issuestore/7/c/7c8cdd7c69e150251b3c4417c051cfb2091ab53b,6/f/6ff94864f955906e67eb6a0ec953559e06ea9427
+w
+G.idea/sonarlint/issuestore/8/3/83854649d5f8218f8d440529085e9c8ecb29194a,4/8/484cd6336b17303de024dfd15340bd11acb611bb
+s
+Callure-results/49ca9b9f-bda7-4c7b-9be0-5313a4a8b542-attachment.json,9/1/91b45fa974cd7847d50f88e67cedf4d6d6082652
+s
+Callure-results/32adc155-113b-44db-a6ab-636de9fe9346-attachment.json,4/0/4087437472ff11e33315a211f982a2044c2b0eef
+9
+	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
+w
+G.idea/sonarlint/issuestore/a/1/a123abce010ea7d96fa76c6a9040950b5dac59bc,0/7/07378d44aab5ffb2ca6045200bf934a1485c540c
+O
+_01_js_basics/order_numbers.txt,1/0/10be36f7e0c47bdbe87684c42be1d0aec950ef66
+w
+G.idea/sonarlint/issuestore/d/5/d511c589170d278372206f43fba94a05d63a379c,4/c/4cd8f2d03a6e92992e01c4715f93c96e6bed5153
+w
+G.idea/sonarlint/issuestore/0/d/0d37599a8093aec9006e9ba3ea8329338e4c0dba,b/5/b556f33d1b693e28efe3a73310cd27c0393f8b1c
+w
+G.idea/sonarlint/issuestore/1/5/15ea0c88c5dfb4f1617aae518ebeab5669a2c289,1/9/19672600294941f9a5a317685ba752709f84a1c2
+w
+G.idea/sonarlint/issuestore/4/1/41501511bb37805640b5b2e922be21c61d048df9,0/5/05df8a9d8f1ef2054c7b3539965f020525f3964b
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
+P
+ _01_js_basics/test/tsconfig.json,0/9/0984835b49bc46962c90d3834100ca316bc067f2
+q
+Aallure-results/3579d0d1-0b47-43c9-91ea-5398153a81a9-testsuite.xml,d/2/d23e1f7227528e4551c712876ca9defa69a214fe
+b
+2_04_ts_classes_and_interfaces/_01_Class_Example.ts,e/6/e63e16c4b63df16583dfb73778204975bc6767ad
+\
+,_01_js_basics/_02_Variable_Type_And_Scope.js,0/4/0423633ce7aa016b907d2d6cc4664339143c9e30
+N
+_01_js_basics/_16_Debugging.js,c/d/cdb7bc800db033ed522ef471bcf781fad7ce41b7
+V
+&_01_js_basics/_17_File_Manipulation.js,a/c/acbdfdb8efaad8942a8374425a2b0c569f28b06d
+V
+&_01_js_basics/_19_File_Manipulation.js,b/a/ba015e511688d5cfbdb096a3026218c939ffd730
+O
+_01_js_basics/test/wdio.conf.ts,7/2/728093db8dc7834e59a7e3c8465586a953ba60bb

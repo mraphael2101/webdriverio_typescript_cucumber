@@ -1,15 +1,23 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
+import {Given, When, Then, setWorldConstructor, Before} from '@wdio/cucumber-framework';
 
 import LoginPage from '../../pageobjects/login.page';
 import SecurePage from '../../pageobjects/secure.page';
+import {MyWorldParams} from "../../utils/my-world-params";
 
 const pages = {
     login: LoginPage
 }
 
+setWorldConstructor(MyWorldParams)
+
+Before(async function(scenario) {
+    console.log(scenario.pickle.name) // Prints the test name
+});
+
 //Given(/^I am on the login page$/, async function (page) {
 Given(/^I am on the login page$/, async function () {
-    console.log("hello")
+    await this.printColour()
+    console.log(this.colour)
     //await pages[page].open()
 
     await browser.url("https://www.google.com")
@@ -19,10 +27,6 @@ Given(/^I am on the login page$/, async function () {
     });
 
     await browser.debug();
-});
-
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-    await LoginPage.login(username, password)
 });
 
 Then(/^I should see a flash message saying (.*)$/, async (message) => {

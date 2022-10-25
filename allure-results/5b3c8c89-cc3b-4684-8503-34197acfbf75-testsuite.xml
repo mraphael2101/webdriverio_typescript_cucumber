@@ -1,0 +1,104 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666368307275' stop='1666368316938'>
+    <name>The Internet Guinea Pig Website: My first scenario in WebDriverIO</name>
+    <title>The Internet Guinea Pig Website: My first scenario in WebDriverIO</title>
+    <test-cases>
+        <test-case start='1666368307276' status='passed' stop='1666368307280'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1666368307280' status='passed' stop='1666368307820'>
+            <name>Given I am on the login page</name>
+            <title>Given I am on the login page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps>
+                <step start='1666368307283' status='passed' stop='1666368307805'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='2dbf742d-c38c-4f82-83c3-aed507462fca-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1666368307805' status='passed' stop='1666368307813'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Response' source='eb220e83-7663-4cf5-a917-31dd29f9e2a6-attachment.json' type='application/json' size='25'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1666368307813' status='passed' stop='1666368307819'>
+                    <name>POST /session/:sessionId/timeouts</name>
+                    <title>POST /session/:sessionId/timeouts</title>
+                    <attachments>
+                        <attachment title='Request' source='510df53b-753e-4754-bcc9-992bc736c7c1-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1666368307820' status='broken' stop='1666368316936'>
+            <name>When I do something</name>
+            <title>When I do something</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot destructure property 'attach' of 'object null' as it is null.</message>
+                <stack-trace>TypeError: Cannot destructure property 'attach' of 'object null' as it is null.
+                    at new World (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/@cucumber/cucumber/src/support_code_library_builder/world.ts:24:17)
+                    at new Singleton (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/test/utils/my-singleton-world.ts:9:9)
+                    at Function.getInstance (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/test/utils/my-singleton-world.ts:14:34)
+                    at MyWorldParams.&lt;anonymous> (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/test/features/step-definitions/steps.ts:36:26)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async wrapPromiseWithTimeout (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/@cucumber/cucumber/src/time.ts:56:10)
+                    at async Object.run (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)
+                    at async Object.run (/Users/rapham/Documents/javascript_workspace/wdio-cucumber-e2e-test/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1666368316937' status='passed' stop='1666368316937'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -11,7 +11,7 @@ const pages = {
     securePage: SecurePage
 }
 
-setWorldConstructor(MyWorldParams)
+setWorldConstructor(Singleton)
 
 
 Before(async function(scenario) {
@@ -31,7 +31,7 @@ Given(/^I am on the login page$/, async function () {
 });
 
 When(/^I do something$/, async function () {
-    // Mock this to get this to work
+    // Mock this to get this to work - consider reflection goal is to pass single instance to PO
     let options: IWorldOptions;
     this.options = null;
     const s1 = Singleton.getInstance(this.options);

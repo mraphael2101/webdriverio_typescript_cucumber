@@ -2,7 +2,6 @@ import {Given, Then, setWorldConstructor, Before, When} from '@wdio/cucumber-fra
 
 import LoginPage from '../../pageobjects/login.page';
 import SecurePage from '../../pageobjects/secure.page';
-import {MyWorldParams} from "../../utils/my-world-params";
 import {Singleton} from "../../utils/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
 
@@ -12,7 +11,6 @@ const pages = {
 }
 
 setWorldConstructor(Singleton)
-
 
 Before(async function(scenario) {
     console.log(scenario.pickle.name) // Prints the Scenario name
@@ -31,12 +29,21 @@ Given(/^I am on the login page$/, async function () {
 });
 
 When(/^I do something$/, async function () {
-    // Mock this to get this to work - consider reflection goal is to pass single instance to PO
+    // Use reflection to pass single instance to PO
+    // let options: IWorldOptions;
+    // this.options = null;
+    // const s1 = Singleton.getInstance(this.options);
+
     let options: IWorldOptions;
-    this.options = null;
+    var result;
+    for(var property in this.options) {
+        result = await this.options[property]
+        console.log(result)
+    }
+
+    //this.options = null;
     const s1 = Singleton.getInstance(this.options);
 });
-
 
 Then(/^I should see a flash message saying (.*)$/, async (message) => {
     await expect(SecurePage.flashAlert).toBeExisting()

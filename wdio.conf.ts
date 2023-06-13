@@ -26,6 +26,7 @@ export const config: Options.Testrunner = {
     framework: 'cucumber',
     services: ['chromedriver'],
     waitforTimeout: 10000,
+    logLevel: "error",
     reporters:['spec',['allure', {outputDir: 'allure-results'}]],
     autoCompileOpts: {
         autoCompile: true,

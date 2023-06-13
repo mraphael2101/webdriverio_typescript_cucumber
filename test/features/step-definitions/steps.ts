@@ -4,6 +4,7 @@ import LoginPage from '../../pageobjects/login.page';
 import SecurePage from '../../pageobjects/secure.page';
 import {Singleton} from "../../utils/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
+import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
 
 const pages = {
     loginPage: LoginPage,
@@ -30,18 +31,20 @@ Given(/^I am on the login page$/, async function () {
 
 When(/^I do something$/, async function () {
     // Use reflection to pass single instance to PO
-    // let options: IWorldOptions;
-    // this.options = null;
-    // const s1 = Singleton.getInstance(this.options);
-
     let options: IWorldOptions;
-    var result;
-    for(var property in this.options) {
-        result = await this.options[property]
-        console.log(result)
-    }
 
-    //this.options = null;
+    // Constituents of IWorldOptions
+    let attach: ICreateAttachment;
+    let log: ICreateLog;
+    let parameters: any;
+
+    let myInstance = Reflect.construct(
+        options,
+        attach(),
+        log,
+        parameters
+    );
+
     const s1 = Singleton.getInstance(this.options);
 });
 

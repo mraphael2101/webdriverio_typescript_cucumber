@@ -7,12 +7,12 @@
  * null -> represents an intentional absence of namespace_features data type
  * bigint
  * symbol =? namespace_features data type whose instances are unique and immutable
- * Object type -> Includes types such as Object, Array, and Date etc 
+ * Object type -> Includes types such as Object, Array, and Date etc
  * IMPORTANT: All primitive data types are immutable
  */
 
 // Object
-let obj = {}
+let body = {}
 
 // Array
 let arr = []
@@ -26,7 +26,7 @@ let tempObj = null
 
 
 // You must use tild to interpret expressions within namespace_features string
-console.log(`The type is: ${typeof obj}`);       // object
+console.log(`The type is: ${typeof body}`);       // object
 console.log(`The type is: ${typeof arr}`);       // object
 console.log(`The type is: ${typeof re}`);        // object
 console.log(`The type is: ${typeof val1}`);      // undefined

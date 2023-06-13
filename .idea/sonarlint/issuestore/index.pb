@@ -1,8 +1,6 @@
 
 8
 index.ts,a/1/a123abce010ea7d96fa76c6a9040950b5dac59bc
-N
-_01_js_basics/_01_Variables.js,8/3/83854649d5f8218f8d440529085e9c8ecb29194a
 w
 G_04_ts_classes_and_interfaces/_10_Interfaces_And_Optional_Properties.js,7/0/708eb5ac905eed2a23512b21b2ce0b02f6c9497b
 w
@@ -32,18 +30,11 @@ _
 W
 '_01_js_basics/_07_Types_Of_Operators.js,c/f/cf67a19c7ae1aa461b9dab257930ec4cbbb3289d
 O
-_01_js_basics/_03_Data_Types.js,4/1/41501511bb37805640b5b2e922be21c61d048df9
-J
-_01_js_basics/_12_Loops.js,b/a/baba262e97eaa95a9c2b8fd53b00ad8070ca2900
-O
 _02_ts_basics/_01_Data_Types.ts,b/c/bcc9c50a555c0d28adb595955b8ff014c0c4928a
 ^
 ._02_ts_basics/_03_Arrays_And_Tuples_Example.ts,c/f/cf3a4a402d330993e1deff7dc96a4f2019584817
 f
 6_04_ts_classes_and_interfaces/_04_GettersAndSetters.ts,1/c/1c656296f024281f971e376c4ed53c6058e53479
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 w
 G.idea/sonarlint/issuestore/1/c/1c656296f024281f971e376c4ed53c6058e53479,b/3/b313eb15e3e843494d8b65f51720f197f346fc95
 w
@@ -82,8 +73,6 @@ q
 Aallure-results/3579d0d1-0b47-43c9-91ea-5398153a81a9-testsuite.xml,d/2/d23e1f7227528e4551c712876ca9defa69a214fe
 b
 2_04_ts_classes_and_interfaces/_01_Class_Example.ts,e/6/e63e16c4b63df16583dfb73778204975bc6767ad
-\
-,_01_js_basics/_02_Variable_Type_And_Scope.js,0/4/0423633ce7aa016b907d2d6cc4664339143c9e30
 N
 _01_js_basics/_16_Debugging.js,c/d/cdb7bc800db033ed522ef471bcf781fad7ce41b7
 V
@@ -103,5 +92,37 @@ Aallure-results/932255a4-6568-429d-848b-3292b0e6ed42-testsuite.xml,f/b/fbc4df08
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
-<
-wdio.conf.ts,e/8/e8a07a646da987ed99e5d1b0d70352704dded060
+s
+Callure-results/eb220e83-7663-4cf5-a917-31dd29f9e2a6-attachment.json,8/f/8f5e45d13582de7367a387c82f5741b82f0e23b3
+s
+Callure-results/2dbf742d-c38c-4f82-83c3-aed507462fca-attachment.json,8/3/835bc55931066db918c39d64cadb36b952e52bc0
+s
+Callure-results/510df53b-753e-4754-bcc9-992bc736c7c1-attachment.json,d/3/d3c2595ab8b8020fdbc62052e6e4381191888033
+s
+Callure-results/a2242c2e-f53f-487d-9a4c-5a523e218b11-attachment.json,6/0/60c8f99548d2f9ca7944d641b7059148012f8594
+s
+Callure-results/7531a030-7da8-4e47-8ca8-7ad643641c26-attachment.json,d/e/ded4b5c2ded12fe4433e3f6dd0f7b0813b3047ba
+s
+Callure-results/db3149e7-2d57-4996-b9b5-00c3c3c9de7c-attachment.json,9/9/9938d7282365752fcf03ea588f5f90e411462962
+q
+Aallure-results/4c51c51a-646c-44fb-b893-8d0d1830d486-testsuite.xml,1/c/1c96d668df9662c302b56227e71ac7b7312c42f1
+q
+Aallure-results/5b3c8c89-cc3b-4684-8503-34197acfbf75-testsuite.xml,c/7/c7cb3563494499ba8d16dd770cbbc8dbb20364c8
+H
+test/pageobjects/page.ts,5/c/5c53438d257873e0da307634d93284f313f18ce7
+O
+test/pageobjects/secure.page.ts,0/9/09b03d194531a3f05e4a53557a25bf1bbe56042d
+N
+test/pageobjects/login.page.ts,0/0/00d0d3d7134891343f431dfe5777a9c46ebe49e5
+J
+_01_js_basics/_12_Loops.js,b/a/baba262e97eaa95a9c2b8fd53b00ad8070ca2900
+P
+ test/utils/my-singleton-world.ts,a/2/a26c42c491dec0dfffd7df8171f5f088356196e2
+M
+test/utils/my-world-params.ts,2/8/285527ffc78e56825f20afaf11b26183380a1e1a
+N
+_01_js_basics/_01_Variables.js,8/3/83854649d5f8218f8d440529085e9c8ecb29194a
+\
+,_01_js_basics/_02_Variable_Type_And_Scope.js,0/4/0423633ce7aa016b907d2d6cc4664339143c9e30
+K
+test/features/login.feature,d/4/d4fe48900446e2e5d17371025b69ea636d8efdb8

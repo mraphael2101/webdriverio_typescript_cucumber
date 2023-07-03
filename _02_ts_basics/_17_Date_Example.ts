@@ -1,13 +1,12 @@
 
-function doSomething(strDate: string): void {
+function convertStringToDate(strDate: string): void {
     const [month, day, year] = strDate.split('/');
     try {
         var dateEnabled: Date = new Date(day + "/" + month + "/" + year);
-        console.log(dateEnabled.toString())
+        console.log(dateEnabled.toDateString())
     } catch (error) {
         console.log(error);
     }
 }
 
-// doSomething("2023-10-30")
-doSomething("30/10/2023")
+convertStringToDate("30/10/2023")

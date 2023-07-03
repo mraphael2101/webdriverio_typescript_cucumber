@@ -34,17 +34,11 @@ var obj = [
     }
 ];
 
-
 for (var i in obj)
 {
     var type = obj[i].type;
     var source_team = obj[i].source_team;
-
     var user_profile = obj[i].user_profile;
-
     var real_name = user_profile.real_name;
-
-
     console.log(source_team+" : "+real_name);
-
 }

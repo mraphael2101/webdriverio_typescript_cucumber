@@ -34,6 +34,9 @@
         "@wdio/jasmine-framework": "^7.20.3",
         "@wdio/selenium-standalone-service": "^7.25.1",
         "node": "^16.13.2",
-        "save-dev": "0.0.1-security"
+        "save-dev": "0.0.1-security",
+
+        "@aws-sdk/client-dynamodb": "^3.363.0",
+        "@aws-sdk/lib-dynamodb": "3.363.0"
     }
 }

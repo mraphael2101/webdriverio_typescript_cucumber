@@ -9,7 +9,8 @@ function waitFor(conditionFunction: () => boolean, timeout: number) {
         const interval = setInterval(() => {
             if (conditionFunction()) {
                 clearInterval(interval);
-                resolve(); // Call resolve on the promise object
+                // IMPORTANT resolve() function required to trigger promise to resolve and return a value
+                resolve();
             } else if (timeout <= 0) {
                 clearInterval(interval);
                 reject(new Error('Timeout exceeded'));

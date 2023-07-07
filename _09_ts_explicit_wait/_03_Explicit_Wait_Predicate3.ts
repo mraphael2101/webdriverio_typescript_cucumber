@@ -12,7 +12,7 @@ function waitFor(conditionFunction: () => boolean, timeout: number) {
         const interval = setInterval(() => {
             if (conditionFunction()) {
                 clearInterval(interval);
-                // The resolve() function is what triggers the promise to resolve and return a value
+                // IMPORTANT resolve() function required to trigger promise to resolve and return a value
                 resolve()
             } else if (Date.now() - startTime > timeout) {
                 clearInterval(interval);

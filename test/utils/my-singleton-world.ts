@@ -4,7 +4,7 @@ import {IWorldOptions} from "@cucumber/cucumber";
 export class Singleton extends World {
 
     private static instance: Singleton;
-    private colour = "default"
+    private colour = "default_colour"
 
     private constructor(options: IWorldOptions) {
         super(options);

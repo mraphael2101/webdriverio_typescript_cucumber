@@ -1,14 +1,11 @@
-Feature: The Internet Guinea Pig Website
+Feature: Demo feature
 
   Background:
     Given I have landed on the Google HomePage
-#    And I setup data
-#    |username |keyword     |
-#    |abc01    |Erik Larson |
-#    |abc02    |Erik Ronson |
+#    When I do cucumber world manipulation
 
   @wip_unique
-  Scenario Outline: My first outline
+  Scenario Outline: Sample outline
     When I click on the 'Accept all' button on the Privacy Policy Modal, if Displayed
     And I search with the keyword <SearchItem>
     And I click on the first search result
@@ -17,5 +14,4 @@ Feature: The Internet Guinea Pig Website
     Examples:
       | TestId      | SearchItem | ExpectedUrl             |
       | demo_tc_001 | WDIO       | https://webdriver.io/   |
-      | demo_tc_002 | Cypress    | https://www.cypress.io/ |
 

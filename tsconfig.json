@@ -8,11 +8,7 @@
         ],
         "target": "ES2019",
         "experimentalDecorators": true,
-        "module": "CommonJS",   /* Initially CommonJS. Changed to 'amd' to make namespace feature work in JS. Delete dist folder */
-        "outDir": "./dist",
-      /*"outFile": "./dist/bundle.js", // IMPORTANT Will make namespaces work in the JS world*/
+        "module": "CommonJS",
         "strict": true
-    },
-    "include": [],
-    "exclude": []
+    }
 }

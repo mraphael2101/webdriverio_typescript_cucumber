@@ -1,6 +1,7 @@
 import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@wdio/cucumber-framework';
-
+import * as chai from 'chai';
 import LoginPage from '../../page-objects/google.home.page';
+
 import {Singleton} from "../../utils/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
 import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
@@ -21,15 +22,11 @@ Given(/^Google page is opened$/, async function() {
 });
 
 Given(/^I have landed on the Google HomePage$/, async function () {
-    await this.printColour()
-    console.log(this.colour)
-
     await browser.url("https://www.google.com").then(async function() {
         await browser.getUrl()
-        await browser.setTimeout({implicit: 5000, pageLoad: 2000})
+        // implicit: Retry to find element every second
+        await browser.setTimeout({implicit: 1000, pageLoad: 10000})
     });
-
-    console.log("a")
 
 });
 
@@ -68,12 +65,12 @@ When(/^I click on the first search result$/, async () => {
 
 When(/^I do cucumber world manipulation$/, async function () {
     // Use reflection to pass single instance to PO
-    let options: IWorldOptions;
+    // let options: IWorldOptions;
 
     // Constituents of IWorldOptions
-    let attach: ICreateAttachment;
-    let log: ICreateLog;
-    let parameters: any;
+    // let attach: ICreateAttachment;
+    // let log: ICreateLog;
+    // let parameters: any;
 
     // let myInstance = Reflect.construct(
     //     options,
@@ -82,9 +79,15 @@ When(/^I do cucumber world manipulation$/, async function () {
     //     parameters
     // );
 
-    const s1 = Singleton.getInstance(this.options);
+    // const s1 = Singleton.getInstance(this.options);
+
+    await this.printColour()
+    console.log(this.colour)
 });
 
 Then(/^the URL should match the (.*)$/, async(expectedUrl) => {
     console.log(expectedUrl);
+    let actualUrl = await browser.getUrl();
+    await browser.setTimeout({implicit: 1000, pageLoad: 10000});
+    chai.expect(actualUrl).to.equal(expectedUrl);
 });

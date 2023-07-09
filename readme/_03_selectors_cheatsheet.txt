@@ -1,0 +1,25 @@
+CSS selectors
+                    #id attr val                            ->  $('#firstname')
+                    class attr val                          ->  $('.loginBtn')
+                    tag                                     ->  $('<h1>')
+                    tagname[attr name = attr val]           ->  $('input[value=Next]')
+contains            tagname[attr name *= attr val]          ->  $('input[value*=Next]')
+starts-with         tagname[attr name ^= partial val]       ->  $('input[value^=Next]')
+ends-with           tagname[attr name $= partial val]       ->  $('input[value$=Next]')
+
+
+
+Text
+tag = text                                                  ->  $('div=Sign in')
+tag *= partial text                                         ->  $('title*=your account')
+
+
+XPath
+                    //tagname[@attrname = 'attr val']       ->  $("//div[@name='name']")
+full text           //tagname[.="text"]                     ->  $("//div[.='some text']")
+partial tex         //tagname[contains(., "text")]          ->  $("//tagname[contains(.,'text')]")
+
+
+Link text
+=fullText                                                   ->  $('=webdriverio')
+*=partialText                                               ->  $('*=driverio')

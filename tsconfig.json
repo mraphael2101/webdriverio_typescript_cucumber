@@ -4,13 +4,13 @@
             "node",
             "webdriverio/async",
             "@wdio/cucumber-framework",
-            "expect-webdriverio",
+            "expect-webdriverio"
         ],
         "target": "ES2019",
         "experimentalDecorators": true,
         "module": "CommonJS",   /* Initially CommonJS. Changed to 'amd' to make namespace feature work in JS. Delete dist folder */
         "outDir": "./dist",
-        /*"outFile": "./dist/bundle.js", // IMPORTANT Will make namespaces work in the JS world*/
+      /*"outFile": "./dist/bundle.js", // IMPORTANT Will make namespaces work in the JS world*/
         "strict": true
     },
     "include": [],

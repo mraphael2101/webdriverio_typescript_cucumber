@@ -19,7 +19,7 @@ export const config: Options.Testrunner = {
         dryRun: false,
     },
     specs: [
-        './test/features/*.feature'
+        './test/features/*/*.feature'
     ],
     path: 'wd/hub',
     baseUrl: 'http://www.google.com',

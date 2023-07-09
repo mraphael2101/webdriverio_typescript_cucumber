@@ -1,14 +1,12 @@
 import {Given, Then, setWorldConstructor, Before, When, DataTable} from '@wdio/cucumber-framework';
 
-import LoginPage from '../../pageobjects/login.page';
-import SecurePage from '../../pageobjects/secure.page';
+import LoginPage from '../../page-objects/login.page';
 import {Singleton} from "../../utils/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
 import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
 
 const pages = {
     loginPage: LoginPage,
-    securePage: SecurePage
 }
 
 setWorldConstructor(Singleton)
@@ -16,6 +14,12 @@ setWorldConstructor(Singleton)
 Before(async function(scenario) {
     console.log(scenario.pickle.name) // Prints the Scenario name
 });
+
+Given(/^Google page is opened$/, async function() {
+    await browser.url("https://www.google.com");
+    // await browser.pause(10000);
+});
+
 
 Given(/^I am on the login page$/, async function () {
     await this.printColour()
@@ -39,20 +43,14 @@ When(/^I do cucumber world manipulation$/, async function () {
     let log: ICreateLog;
     let parameters: any;
 
-    let myInstance = Reflect.construct(
-        options,
-        attach(),
-        log,
-        parameters
-    );
+    // let myInstance = Reflect.construct(
+    //     options,
+    //     attach(),
+    //     log,
+    //     parameters
+    // );
 
     const s1 = Singleton.getInstance(this.options);
-});
-
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    console.log("b -> " +  message)
-    await expect(SecurePage.flashAlert).toBeExisting()
-    await expect(SecurePage.flashAlert).toHaveTextContaining(message)
 });
 
 Then(/^I should do something else$/, function () {

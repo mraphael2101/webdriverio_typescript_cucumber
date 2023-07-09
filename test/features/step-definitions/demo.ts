@@ -58,12 +58,12 @@ When(/^I search with the keyword (.*)$/, async (searchItem) => {
     await browser.keys("Enter");
 });
 
-When(/^I click on the first search result$/, async () => {
+When('I click on the first search result', async () => {
     let ele = await $('<h3>');
     await ele.click();
 });
 
-When(/^I do cucumber world manipulation$/, async function () {
+When('I manipulate cucumber world', async function () {
     // Use reflection to pass single instance to PO
     // let options: IWorldOptions;
 

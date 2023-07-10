@@ -26,7 +26,7 @@ function waitFor2(conditionFunction: () => boolean, timeout: number) {
 }
 
 // Replace return true; with your condition
-async function example() {
+async function example2() {
     console.log('Waiting...');
     await waitFor2(() => { return true }, 5000)
         .then(function (){
@@ -35,4 +35,4 @@ async function example() {
 }
 
 
-example().then(function () {});
+example2().then(function () {});

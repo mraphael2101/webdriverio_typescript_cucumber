@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "headed": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'",
-        "headless": "export HEADLESS=Y && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'"
+        "headless bdd sce 1": "export HEADLESS=Y && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'",
+        "headed bdd sce 1": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_unique'",
+        "headed bdd sce 2": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wip_demo2'"
     },
     "keywords": [
         "wdio",
@@ -13,7 +14,7 @@
         "e2e",
         "tests"
     ],
-    "author": "",
+    "author": "Mark Raphael",
     "license": "ISC",
     "devDependencies": {
         "@types/chai": "^4.3.5",

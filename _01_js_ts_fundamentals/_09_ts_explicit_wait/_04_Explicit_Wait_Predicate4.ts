@@ -22,7 +22,7 @@ function isRandomIntEqualTo8(): boolean {
     return Math.floor(Math.random() * 8) + 1 === 5;
 }
 
-async function example() {
+async function example4() {
     console.log('Waiting...');
     await waitFor4(isRandomIntEqualTo8, 10000)
         .then(function (){
@@ -30,4 +30,4 @@ async function example() {
         })
 }
 
-example().then(function () {});
+example4().then(function () {});

@@ -16,14 +16,15 @@ function waitFor4(conditionFunction: () => boolean, timeout: number) {
     });
 }
 
-
-function isRandomIntEqualTo5(): boolean {
+var count: number = 0;
+function isRandomIntEqualTo8(): boolean {
+    console.log("called " + (count += 1) + " time(s)");
     return Math.floor(Math.random() * 8) + 1 === 5;
 }
 
 async function example() {
     console.log('Waiting...');
-    await waitFor4(isRandomIntEqualTo5, 5000)
+    await waitFor4(isRandomIntEqualTo8, 10000)
         .then(function (){
             console.log("Condition evaluated to true")
         })

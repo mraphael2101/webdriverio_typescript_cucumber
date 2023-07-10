@@ -8,11 +8,11 @@
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-async function example() {
+async function example1() {
     console.log('Start');
     await wait(2000);
     console.log('End');
 }
 
-example().then(r => function () {
+example1().then(r => function () {
 });

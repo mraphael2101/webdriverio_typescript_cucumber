@@ -5,7 +5,7 @@
  * You can replace the return true; line in the example() function with your own condition that you are waiting for.
  * */
 
-function waitFor(conditionFunction: () => boolean, timeout: number) {
+function waitFor3(conditionFunction: () => boolean, timeout: number) {
     const pollInterval = 100; // ms
     return new Promise<void>((resolve, reject) => {
         const startTime = Date.now();
@@ -25,7 +25,7 @@ function waitFor(conditionFunction: () => boolean, timeout: number) {
 // Replace return true; with your condition
 async function example() {
     console.log('Waiting...');
-    await waitFor(() => { return true; }, 5000)
+    await waitFor3(() => { return true; }, 5000)
         .then(function (){
             console.log("Condition evaluated to true")
         })

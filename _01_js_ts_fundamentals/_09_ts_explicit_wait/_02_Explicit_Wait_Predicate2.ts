@@ -3,7 +3,11 @@
  * is called. The timeout variable specifies how long to wait for the condition to be met before giving
  * up and throwing an error.*/
 
-function waitFor(conditionFunction: () => boolean, timeout: number) {
+async function getRandomInt(): Promise<number> {
+    return Math.floor(Math.random() * 8) + 1;
+}
+
+function waitFor2(conditionFunction: () => boolean, timeout: number) {
     const pollInterval = 100; // ms
     return new Promise<void>((resolve, reject) => {
         const interval = setInterval(() => {
@@ -24,10 +28,11 @@ function waitFor(conditionFunction: () => boolean, timeout: number) {
 // Replace return true; with your condition
 async function example() {
     console.log('Waiting...');
-    await waitFor(() => { return true; }, 5000)
+    await waitFor2(() => { return true }, 5000)
         .then(function (){
             console.log("Condition evaluated to true")
         })
 }
+
 
 example().then(function () {});

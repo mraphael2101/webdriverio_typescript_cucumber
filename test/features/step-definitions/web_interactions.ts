@@ -1,5 +1,8 @@
 import {Given, Then, When, DataTable} from '@wdio/cucumber-framework';
+import * as chai from 'chai';
+import * as chaiAsPromised from 'chai-as-promised';
 
+chai.use(chaiAsPromised);
 /**
  * Web Interactions
  */
@@ -51,4 +54,6 @@ When('I perform Web Interactions on a Drop-down list', async function () {
     const ddl = await $(`//select/option[@selected="selected"]`);
     let val = ddl.getText();
     console.log(val);
+    // This code will wait for the promise to eventually equal the string value
+    chai.expect(val).to.eventually.equal("Please select an option");
 });

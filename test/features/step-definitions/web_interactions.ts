@@ -40,7 +40,7 @@ When('I perform Web Interactions on a Textfield', async () => {
     }
 
     await ele.addValue("6789");  // Appends the value to the existing string input
-// await browser.debug();
+    await browser.debug();
 });
 
 When('I perform Web Interactions on a Drop-down list', async function () {
@@ -51,9 +51,27 @@ When('I perform Web Interactions on a Drop-down list', async function () {
      * 2. Select by attribute, text, index
      * 3. Get a list of options
      */
-    const ddl = await $(`//select/option[@selected="selected"]`);
+    const ddl = await $(`/
+    /select/ option[
+
+    @selected="selected"]`);
     let val = ddl.getText();
     console.log(val);
     // This code will wait for the promise to eventually equal the string value
     chai.expect(val).to.eventually.equal("Please select an option");
+
+    // await ddl.selectByAttribute("value","1");
+    // await ddl.selectByIndex(0);
+
+    let eleArr = await $$(`select > option`)
+    let arr = [];
+    // forEach loop does not support the async function so do not use
+    for(let i = 0; i < eleArr.length; i++) {
+        let ele = eleArr[i];
+        let val = await ele.getText();
+        arr.push(val);
+        console.log(ele.getText());
+    }
+    console.log(`>> Options Array: ${arr}`);
+    await browser.debug();
 });

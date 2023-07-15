@@ -6,7 +6,12 @@ chai.use(chaiAsPromised);
 /**
  * Web Interactions
  */
-
+Given('I have landed on the eBay HomePage', async () => {
+    await browser.url("https://www.ebay.co.uk");
+    // Wait for up to 15 secs before timeout
+    // Wait for 10 secs before page load timeout
+    await browser.setTimeout({implicit: 15000, pageLoad: 10000});
+});
 Given('I have landed on a GUI Widget Library Examples Web Page - {string}', async (path) => {
     await browser.url("https://the-internet.herokuapp.com/" + path);
     // Wait for up to 15 secs before timeout
@@ -73,7 +78,7 @@ When('I perform Web Interactions on a Drop-down list', async function () {
     console.log(`>> Options Array: ${arr}`);
     // await browser.debug();
 });
-When('I perform Web Interactions on a checkbox', async function () {
+When('I perform Web Interactions on a Checkbox', async function () {
     /**
      * Checkbox
      * Actions:
@@ -91,4 +96,95 @@ When('I perform Web Interactions on a checkbox', async function () {
     let isChecked = cboxEleArr[0].isSelected();
     chai.expect(isChecked).to.eventually.be.true;
     // await browser.debug();
+});
+When('I perform Web Interactions on a Window', async function () {
+    /**
+     * Windows handling
+     * Steps:
+     * 1. Open other Windows
+     * 2. Switch to the window based on the title
+     * 3. Switch back to the main window
+     */
+    await $(`=Click Here`).click();
+    await $(`=Elemental Selenium`).click();
+    let currentWinTitle = await browser.getTitle();
+    console.log(`>> currentWinTitle: ${currentWinTitle}`);
+
+    // Switch to a specific Window
+    let winHandles = await browser.getWindowHandles();
+    for(let i = 0; i < winHandles.length; i++) {
+        console.log(`>> Win handle: ${winHandles[i]}`);
+        await browser.switchToWindow(winHandles[i]);
+
+        currentWinTitle = await browser.getTitle();
+        if(currentWinTitle.includes("Elemental Selenium |")) {
+            await browser.switchToWindow(winHandles[i]);
+            let headerTxtSel = await $(`<h1>`).getText();
+            console.log(`>> headerTxtSel: ${headerTxtSel}`);
+            break;
+        }
+    }
+    // await browser.debug();
+});
+When('I perform Web Interactions on an Alert', async function () {
+    /**
+     * Handling alerts
+     * 1. isAlertOpen()
+     * 2. acceptAlert()
+     * 3. dismissAlert()
+     * 4. getAlertText()
+     * 5. sendAlertText()
+     */
+     await $(`button=Click for JS Confirm`).click();
+     if(await browser.isAlertOpen()) {
+         await browser.acceptAlert(); // Clicks ok
+         await browser.pause(2000);
+     }
+    await $(`button=Click for JS Confirm`).click();
+    if(await browser.isAlertOpen()) {
+        let alertTxt = await browser.getAlertText();
+        console.log(`>> alertTxt: ${alertTxt}`);
+        await browser.dismissAlert(); // Clicks cancel
+        await browser.pause(2000);
+    }
+    // await browser.debug();
+});
+When('I perform Web Interactions to upload a file', async function () {
+    /**
+     * File upload
+     */
+    await $(`#file-upload`).addValue(`${process.cwd()}/data/fileupload/sample.txt`);
+    await $(`#file-submit`).click();
+    await browser.debug();
+});
+When('I perform Web Interactions on a iFrame', async function () {
+    /**
+     * Frames
+     * Methods used:
+     * 1. switchToFrame
+     * 2. switchToParentFrame
+     */
+    await $(`=iFrame`).click();
+    let iFrameEle = await $(`#mce_0_ifr`);
+    await browser.switchToFrame(iFrameEle);
+    // At this point you can interact with the iFrame
+    await $(`#tinymce`).setValue("Typing into an iFrame");
+    await browser.switchToParentFrame();
+    await browser.pause(2000);
+});
+When('I demonstrate performing a Key Press', async function () {
+    await $(`#tinymce`).click();
+    await browser.keys('Delete');
+    await browser.debug();
+});
+When('I perform scrolling events', async function () {
+    /**
+     * Scrolling
+     * Methods used:
+     * 1. scrollIntoView()
+     * 2.
+     */
+    let targetEle = await $(`.vl-module.vl-loyalty.off-card.vl-atf-module-js`);
+    await targetEle.scrollIntoView();
+    await browser.debug();
 });

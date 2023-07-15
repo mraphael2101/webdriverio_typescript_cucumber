@@ -9,6 +9,7 @@
         "target": "ES2019",
         "experimentalDecorators": true,
         "module": "CommonJS",
-        "strict": true
+        "strict": true,
+      "allowSyntheticDefaultImports": true
     }
 }

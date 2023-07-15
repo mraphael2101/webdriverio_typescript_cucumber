@@ -1,18 +1,18 @@
 import {Given, Then, When, DataTable} from '@wdio/cucumber-framework';
 import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
-
 chai.use(chaiAsPromised);
+
 /**
  * Web Interactions
  */
+
 Given('I have landed on a GUI Widget Library Examples Web Page - {string}', async (path) => {
     await browser.url("https://the-internet.herokuapp.com/" + path);
     // Wait for up to 15 secs before timeout
     // Wait for 10 secs before page load timeout
     await browser.setTimeout({implicit: 15000, pageLoad: 10000});
 });
-
 When('I perform Web Interactions on a Textfield', async () => {
     /**
      * Input box
@@ -42,7 +42,6 @@ When('I perform Web Interactions on a Textfield', async () => {
     await ele.addValue("6789");  // Appends the value to the existing string input
     await browser.debug();
 });
-
 When('I perform Web Interactions on a Drop-down list', async function () {
     /**
      * Drop-down menu
@@ -51,27 +50,39 @@ When('I perform Web Interactions on a Drop-down list', async function () {
      * 2. Select by attribute, text, index
      * 3. Get a list of options
      */
-    const ddl = await $(`/
-    /select/ option[
-
-    @selected="selected"]`);
-    let val = ddl.getText();
-    console.log(val);
+    let preselectedDdlOpt = await $(`//select/option[@selected='selected']`);
+    let ddlText = preselectedDdlOpt.getText();
+    console.log(ddlText);
     // This code will wait for the promise to eventually equal the string value
-    chai.expect(val).to.eventually.equal("Please select an option");
+    chai.expect(ddlText).to.eventually.equal("Please select an option");
 
-    // await ddl.selectByAttribute("value","1");
-    // await ddl.selectByIndex(0);
+    let ddlEle = await $(`#dropdown`);
+    await ddlEle.selectByAttribute("value", 1);
+    await ddlEle.selectByVisibleText("Option 1");
+    await ddlEle.selectByIndex(0);
 
-    let eleArr = await $$(`select > option`)
+    let eleArr = await $$(`#dropdown`)
     let arr = [];
     // forEach loop does not support the async function so do not use
-    for(let i = 0; i < eleArr.length; i++) {
+    for (let i = 0; i < eleArr.length; i++) {
         let ele = eleArr[i];
         let val = await ele.getText();
         arr.push(val);
         console.log(ele.getText());
     }
     console.log(`>> Options Array: ${arr}`);
-    await browser.debug();
+    // await browser.debug();
+});
+When('I perform Web Interactions on a checkbox', async function () {
+    /**
+     * Checkbox
+     * Actions:
+     * 1. Select an option
+     * 2. Unselect an option (if selected)
+     * 3. Assert if option is selected
+     * 4. Select all options
+     */
+    // let cbox = await $();
+
+    // await browser.debug();
 });

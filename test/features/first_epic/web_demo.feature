@@ -4,7 +4,7 @@ Feature: Demo feature
     Given I have landed on the Google HomePage
 #    When I manipulate cucumber world
 
-  @wip_unique
+  @web_demo
   Scenario Outline: Sample outline
     When I click on the 'Accept all' button on the Privacy Policy Modal, if Displayed
     And I search with the keyword <Search Item>

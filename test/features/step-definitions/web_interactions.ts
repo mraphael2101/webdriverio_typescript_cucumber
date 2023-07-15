@@ -82,7 +82,13 @@ When('I perform Web Interactions on a checkbox', async function () {
      * 3. Assert if option is selected
      * 4. Select all options
      */
-    // let cbox = await $();
-
+    let cboxEleArr = await $$(`//form[@id='checkboxes']/input`);
+    for (let i = 0; i < cboxEleArr.length; i++) {
+        if(!await cboxEleArr[i].isSelected()) {
+            await cboxEleArr[i].click();
+        }
+    }
+    let isChecked = cboxEleArr[0].isSelected();
+    chai.expect(isChecked).to.eventually.be.true;
     // await browser.debug();
 });

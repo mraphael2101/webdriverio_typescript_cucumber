@@ -1,4 +1,4 @@
-import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@wdio/cucumber-framework';
+import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumber/cucumber';
 import * as chai from 'chai';
 import LoginPage from '../../page-objects/google.home.page';
 
@@ -7,7 +7,6 @@ import {IWorldOptions} from "@cucumber/cucumber";
 import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
 
 setWorldConstructor(Singleton);
-declare const browser: any;
 
 const pages = {
     loginPage: LoginPage,

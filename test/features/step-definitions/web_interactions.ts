@@ -3,8 +3,6 @@ import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
-declare const browser: any;
-
 Given('I have landed on the eBay HomePage', async () => {
     await browser.url("https://www.ebay.co.uk");
     // Wait for up to 15 secs before timeout

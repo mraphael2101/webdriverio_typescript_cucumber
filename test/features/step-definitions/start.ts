@@ -2,7 +2,7 @@ import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumb
 import * as chai from 'chai';
 import LoginPage from '../../page-objects/google.home.page';
 
-import {Singleton} from "../../utils/my-singleton-world";
+import {Singleton} from "../../helpers/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
 import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
 

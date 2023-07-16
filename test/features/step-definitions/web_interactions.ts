@@ -44,7 +44,7 @@ When('I perform Web Interactions on a Textfield', async () => {
     }
 
     await ele.addValue("6789");  // Appends the value to the existing string input
-    await browser.debug();
+    // await browser.debug();
 });
 When('I perform Web Interactions on a Drop-down list', async function () {
     /**
@@ -155,7 +155,8 @@ When('I perform Web Interactions to upload a file', async function () {
      */
     await browser.$(`#file-upload`).addValue(`${process.cwd()}/data/fileupload/sample.txt`);
     await browser.$(`#file-submit`).click();
-    await browser.debug();
+    await browser.pause(2000);
+    // await browser.debug();
 });
 When('I perform Web Interactions on a iFrame', async function () {
     /**
@@ -186,5 +187,5 @@ When('I perform scrolling events', async function () {
      */
     let targetEle = await browser.$(`.vl-module.vl-loyalty.off-card.vl-atf-module-js`);
     await targetEle.scrollIntoView();
-    await browser.debug();
+    // await browser.debug();
 });

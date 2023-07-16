@@ -2,11 +2,9 @@ import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumb
 import * as chai from 'chai';
 import LoginPage from '../../page-objects/google.home.page';
 
-import {Singleton} from "../../helpers/my-singleton-world";
-import {IWorldOptions} from "@cucumber/cucumber";
-import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
+import {MyWorldParams} from "../../helpers/my-world-params";
 
-setWorldConstructor(Singleton);
+setWorldConstructor(MyWorldParams);
 
 const pages = {
     loginPage: LoginPage,
@@ -27,7 +25,28 @@ Given(/^I have landed on the Google HomePage$/, async function () {
         // implicit: Retry to find element every second
         await browser.setTimeout({implicit: 1000, pageLoad: 10000})
     });
+});
 
+When('I manipulate cucumber world', async function () {
+    // Use reflection to pass single instance to PO
+    // let options: IWorldOptions;
+
+    // Constituents of IWorldOptions
+    // let attach: ICreateAttachment;
+    // let log: ICreateLog;
+    // let parameters: any;
+
+    // let myInstance = Reflect.construct(
+    //     options,
+    //     attach(),
+    //     log,
+    //     parameters
+    // );
+
+    // const s1 = Singleton.getInstance(this.options);
+
+    await this.printColour()
+    console.log(this.colour)
 });
 
 Given('I click on the {string} button on the Privacy Policy Modal, if Displayed', async (btnCaption) => {
@@ -61,28 +80,6 @@ When(/^I search with the keyword (.*)$/, async (searchItem) => {
 When('I click on the first search result', async () => {
     let ele = await browser.$('<h3>');
     await ele.click();
-});
-
-When('I manipulate cucumber world', async function () {
-    // Use reflection to pass single instance to PO
-    // let options: IWorldOptions;
-
-    // Constituents of IWorldOptions
-    // let attach: ICreateAttachment;
-    // let log: ICreateLog;
-    // let parameters: any;
-
-    // let myInstance = Reflect.construct(
-    //     options,
-    //     attach(),
-    //     log,
-    //     parameters
-    // );
-
-    // const s1 = Singleton.getInstance(this.options);
-
-    await this.printColour()
-    console.log(this.colour)
 });
 
 Then(/^the URL should match the (.*)$/, async(expectedUrl) => {

@@ -2,7 +2,7 @@ Feature: Demo feature
 
   Background:
     Given I have landed on the Google HomePage
-#    When I manipulate cucumber world
+    When I manipulate cucumber world
 
   @web_demo
   Scenario Outline: Sample outline

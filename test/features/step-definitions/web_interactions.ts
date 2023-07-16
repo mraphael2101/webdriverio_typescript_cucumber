@@ -1,11 +1,10 @@
-import {Given, Then, When, DataTable} from '@wdio/cucumber-framework';
+import {Given, When} from '@wdio/cucumber-framework';
 import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
-/**
- * Web Interactions
- */
+declare const browser: any;
+
 Given('I have landed on the eBay HomePage', async () => {
     await browser.url("https://www.ebay.co.uk");
     // Wait for up to 15 secs before timeout
@@ -28,7 +27,7 @@ When('I perform Web Interactions on a Textfield', async () => {
      * 4. Slow typing
      */
 
-    let ele = await $("[type=number]");
+    let ele = await browser.$("[type=number]");
 
     const myString = "12345";
 
@@ -55,18 +54,18 @@ When('I perform Web Interactions on a Drop-down list', async function () {
      * 2. Select by attribute, text, index
      * 3. Get a list of options
      */
-    let preselectedDdlOpt = await $(`//select/option[@selected='selected']`);
+    let preselectedDdlOpt = await browser.$(`//select/option[@selected='selected']`);
     let ddlText = preselectedDdlOpt.getText();
     console.log(ddlText);
     // This code will wait for the promise to eventually equal the string value
     chai.expect(ddlText).to.eventually.equal("Please select an option");
 
-    let ddlEle = await $(`#dropdown`);
+    let ddlEle = await browser.$(`#dropdown`);
     await ddlEle.selectByAttribute("value", 1);
     await ddlEle.selectByVisibleText("Option 1");
     await ddlEle.selectByIndex(0);
 
-    let eleArr = await $$(`#dropdown`)
+    let eleArr = await browser.$$(`#dropdown`)
     let arr = [];
     // forEach loop does not support the async function so do not use
     for (let i = 0; i < eleArr.length; i++) {
@@ -87,7 +86,7 @@ When('I perform Web Interactions on a Checkbox', async function () {
      * 3. Assert if option is selected
      * 4. Select all options
      */
-    let cboxEleArr = await $$(`//form[@id='checkboxes']/input`);
+    let cboxEleArr = await browser.$$(`//form[@id='checkboxes']/input`);
     for (let i = 0; i < cboxEleArr.length; i++) {
         if(!await cboxEleArr[i].isSelected()) {
             await cboxEleArr[i].click();
@@ -105,8 +104,8 @@ When('I perform Web Interactions on a Window', async function () {
      * 2. Switch to the window based on the title
      * 3. Switch back to the main window
      */
-    await $(`=Click Here`).click();
-    await $(`=Elemental Selenium`).click();
+    await browser.$(`=Click Here`).click();
+    await browser.$(`=Elemental Selenium`).click();
     let currentWinTitle = await browser.getTitle();
     console.log(`>> currentWinTitle: ${currentWinTitle}`);
 
@@ -119,7 +118,7 @@ When('I perform Web Interactions on a Window', async function () {
         currentWinTitle = await browser.getTitle();
         if(currentWinTitle.includes("Elemental Selenium |")) {
             await browser.switchToWindow(winHandles[i]);
-            let headerTxtSel = await $(`<h1>`).getText();
+            let headerTxtSel = await browser.$(`<h1>`).getText();
             console.log(`>> headerTxtSel: ${headerTxtSel}`);
             break;
         }
@@ -135,12 +134,13 @@ When('I perform Web Interactions on an Alert', async function () {
      * 4. getAlertText()
      * 5. sendAlertText()
      */
-     await $(`button=Click for JS Confirm`).click();
+     let jsConfirmBtn = await browser.$(`button=Click for JS Confirm`);
+     await jsConfirmBtn.click();
      if(await browser.isAlertOpen()) {
          await browser.acceptAlert(); // Clicks ok
          await browser.pause(2000);
      }
-    await $(`button=Click for JS Confirm`).click();
+    await jsConfirmBtn.click();
     if(await browser.isAlertOpen()) {
         let alertTxt = await browser.getAlertText();
         console.log(`>> alertTxt: ${alertTxt}`);
@@ -153,8 +153,8 @@ When('I perform Web Interactions to upload a file', async function () {
     /**
      * File upload
      */
-    await $(`#file-upload`).addValue(`${process.cwd()}/data/fileupload/sample.txt`);
-    await $(`#file-submit`).click();
+    await browser.$(`#file-upload`).addValue(`${process.cwd()}/data/fileupload/sample.txt`);
+    await browser.$(`#file-submit`).click();
     await browser.debug();
 });
 When('I perform Web Interactions on a iFrame', async function () {
@@ -164,16 +164,16 @@ When('I perform Web Interactions on a iFrame', async function () {
      * 1. switchToFrame
      * 2. switchToParentFrame
      */
-    await $(`=iFrame`).click();
-    let iFrameEle = await $(`#mce_0_ifr`);
+    await browser.$(`=iFrame`).click();
+    let iFrameEle = await browser.$(`#mce_0_ifr`);
     await browser.switchToFrame(iFrameEle);
     // At this point you can interact with the iFrame
-    await $(`#tinymce`).setValue("Typing into an iFrame");
+    await browser.$(`#tinymce`).setValue("Typing into an iFrame");
     await browser.switchToParentFrame();
     await browser.pause(2000);
 });
 When('I demonstrate performing a Key Press', async function () {
-    await $(`#tinymce`).click();
+    await browser.$(`#tinymce`).click();
     await browser.keys('Delete');
     await browser.debug();
 });
@@ -184,7 +184,7 @@ When('I perform scrolling events', async function () {
      * 1. scrollIntoView()
      * 2.
      */
-    let targetEle = await $(`.vl-module.vl-loyalty.off-card.vl-atf-module-js`);
+    let targetEle = await browser.$(`.vl-module.vl-loyalty.off-card.vl-atf-module-js`);
     await targetEle.scrollIntoView();
     await browser.debug();
 });

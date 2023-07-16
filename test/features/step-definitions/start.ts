@@ -6,11 +6,12 @@ import {Singleton} from "../../utils/my-singleton-world";
 import {IWorldOptions} from "@cucumber/cucumber";
 import {ICreateAttachment, ICreateLog} from "@cucumber/cucumber/lib/runtime/attachment_manager";
 
+setWorldConstructor(Singleton);
+declare const browser: any;
+
 const pages = {
     loginPage: LoginPage,
 }
-
-setWorldConstructor(Singleton)
 
 Before(async function(scenario) {
     console.log(scenario.pickle.name) // Prints the Scenario name
@@ -31,15 +32,15 @@ Given(/^I have landed on the Google HomePage$/, async function () {
 });
 
 Given('I click on the {string} button on the Privacy Policy Modal, if Displayed', async (btnCaption) => {
-    let modal = await $("div[class='KxvlWc']");
+    let modal = await browser.$("div[class='KxvlWc']");
     let modalDisplayed = await modal.isDisplayed();
 
     if(modalDisplayed) {
         if(btnCaption.toLowerCase() === "accept all") {
-            await $("button[id='L2AGLb']").click();
+            await browser.$("button[id='L2AGLb']").click();
         }
         if(btnCaption.toLowerCase() === "reject all") {
-            await $("button[id='W0wltc']").click();
+            await browser.$("button[id='W0wltc']").click();
         }
     }
 });
@@ -52,14 +53,14 @@ Given(/^I setup data$/, function (table: DataTable) {
 
 When(/^I search with the keyword (.*)$/, async (searchItem) => {
     console.log(searchItem);
-    let ele = await $('[name=q]');
+    let ele = await browser.$('[name=q]');
     await ele.setValue(searchItem);
     await browser.pause(1000); // implicit wait
     await browser.keys("Enter");
 });
 
 When('I click on the first search result', async () => {
-    let ele = await $('<h3>');
+    let ele = await browser.$('<h3>');
     await ele.click();
 });
 

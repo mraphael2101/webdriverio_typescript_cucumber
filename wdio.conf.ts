@@ -1,11 +1,10 @@
 import {Options} from "@wdio/types";
 
-
 let headless = process.env.HEADLESS;
 console.log(`>> The headless flag: ${headless}`);
 
 export const config: Options.Testrunner = {
-//export const config: WebdriverIO.Config = {
+// export const config: WebdriverIO.Config = {
     capabilities: [{
         browserName: 'chrome',
         "goog:chromeOptions": {

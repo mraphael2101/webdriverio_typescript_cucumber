@@ -6,10 +6,11 @@
             "@wdio/cucumber-framework",
             "expect-webdriverio"
         ],
+        "resolveJsonModule": true,
         "target": "ES2019",
         "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
         "module": "CommonJS",
-        "strict": true,
-      "allowSyntheticDefaultImports": true
+        "strict": true
     }
 }

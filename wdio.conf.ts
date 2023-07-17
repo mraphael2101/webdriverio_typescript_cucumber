@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
         "goog:chromeOptions": {
             args: headless?.toUpperCase() === 'Y' ? ['--headless','--disable-dev-shm-usage','--no-sandbox','--window-size=1920,1080','--disable-gpu'] : []
         },
-        maxInstances: 1,
+        maxInstances: 2,
     }],
     cucumberOpts: {
         require: ['./test/features/step-definitions/*.ts'],
@@ -26,7 +26,7 @@ export const config: Options.Testrunner = {
     services: ['chromedriver'],
     waitforTimeout: 10000,
     logLevel: "error",
-    reporters:['spec'],
+    reporters:['spec', ['allure', { outputDir: 'allure-results'} ]],
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {

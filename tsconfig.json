@@ -1,4 +1,12 @@
-// To support Edge and Chrome, you can use ECMAScript 2015 (ES6) or later
+/* a) To support Edge and Chrome, you can use ECMAScript 2015 (ES6) or later
+   b) The module attribute value is set to the default commonjs that uses common js style
+      require() and module.exports syntax
+   c) resolveJsonModule allows importing modules with a .json extension. Includes generating a type
+      for the import based on the static json shape
+   d) allowSyntheticDefaultImports allows you to write an import like import React from "react"
+      instead of import * as React from "react" when the module does not explicitly specify a default export1
+*/
+
 {
     "compilerOptions": {
         "moduleResolution": "node",
@@ -10,6 +18,7 @@
             "@wdio/cucumber-framework"
         ],
         "target": "ES6",
+        "resolveJsonModule": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true
     }

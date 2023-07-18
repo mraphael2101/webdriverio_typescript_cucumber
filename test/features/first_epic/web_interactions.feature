@@ -6,14 +6,14 @@ Feature: A feature to demonstrate how to manipulate GUI elements using WDIO
     When I perform Web Interactions on a Textfield
 
   @web_interact
-  Scenario: Manipulate a Drop-down menu
-    Given I have landed on a GUI Widget Library Examples Web Page - "dropdown"
-    When I perform Web Interactions on a Drop-down list
-
-  @web_interact
   Scenario: Manipulate Checkboxes
     Given I have landed on a GUI Widget Library Examples Web Page - "checkboxes"
     When I perform Web Interactions on a Checkbox
+
+  @web_interact
+  Scenario: Manipulate a Drop-down menu
+    Given I have landed on a GUI Widget Library Examples Web Page - "dropdown"
+    When I perform Web Interactions on a Drop-down list
 
   @web_interact
   Scenario: Manipulate Browser Window Tabs

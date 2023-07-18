@@ -1,6 +1,6 @@
 import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumber/cucumber';
 import * as chai from 'chai';
-import LoginPage from '../../page-objects/google.home.page';
+import LoginPage from '../../page_objects/google.home.page';
 
 import {MyWorldParams} from "../../helpers/my-world-params";
 

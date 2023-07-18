@@ -3,8 +3,8 @@ import allure from '@wdio/allure-reporter'
 import * as fs from 'fs'
 let headless = process.env.HEADLESS;
 let env = process.env.ENV;
-console.log(`>> The Test Env flag: ${env}`);
-console.log(`>> The headless flag: ${headless}`);
+// console.log(`>> The Test Env flag: ${env}`);
+// console.log(`>> The headless flag: ${headless}`);
 
 export const config: Options.Testrunner = {
 // export const config: WebdriverIO.Config = {
@@ -16,7 +16,7 @@ export const config: Options.Testrunner = {
         maxInstances: 2,
     }],
     cucumberOpts: {
-        require: ['./test/features/step-definitions/*.ts'],
+        require: ['./test/features/step_definitions/*.ts'],
         strict: false,
         dryRun: false,
     },
@@ -46,7 +46,6 @@ export const config: Options.Testrunner = {
     onPrepare: function (config, capabilities) {
         if(process.env.ENV === "QA" && fs.existsSync("./allure-results")) {
             console.log("Erasing the Allure-Result files");
-            // fs.rmdirSync("./allure-results", {recursive: true});
             fs.rmSync("./allure-results", {recursive:true, force:true});
         }
     },

@@ -24,8 +24,8 @@
   },
   "scripts": {
     "wdio": "wdio run wdio.conf.js",
-    "headed bdd start.feature": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
-    "headed bdd webint.feature": "export HEADLESS=N && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_interact'",
+    "headed bdd start.feature": "export HEADLESS=N && ENV=QA wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
+    "headed bdd webint.feature": "export HEADLESS=N && ENV=QA wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_interact'",
     "headless bdd api.feature": "export HEADLESS=Y && ENV=QA wdio run wdio.conf.ts --cucumberOpts.tagExpression='@api'"
   }
 }

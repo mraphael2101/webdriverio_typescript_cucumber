@@ -42,6 +42,7 @@ When('I perform Web Interactions on a Textfield', async () => {
     }
 
     await ele.addValue("6789");  // Appends the value to the existing string input
+    await browser.pause(2000);
     // await browser.debug();
 });
 When('I perform Web Interactions on a Drop-down list', async function () {
@@ -73,6 +74,7 @@ When('I perform Web Interactions on a Drop-down list', async function () {
         console.log(ele.getText());
     }
     console.log(`>> Options Array: ${arr}`);
+    await browser.pause(2000);
     // await browser.debug();
 });
 When('I perform Web Interactions on a Checkbox', async function () {
@@ -92,6 +94,7 @@ When('I perform Web Interactions on a Checkbox', async function () {
     }
     let isChecked = cboxEleArr[0].isSelected();
     chai.expect(isChecked).to.eventually.be.true;
+    await browser.pause(2000);
     // await browser.debug();
 });
 When('I perform Web Interactions on a Window', async function () {

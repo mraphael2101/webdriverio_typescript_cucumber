@@ -1,6 +1,9 @@
 import {Options} from "@wdio/types";
-
+import allure from '@wdio/allure-reporter'
+import * as fs from 'fs'
 let headless = process.env.HEADLESS;
+let env = process.env.ENV;
+console.log(`>> The Test Env flag: ${env}`);
 console.log(`>> The headless flag: ${headless}`);
 
 export const config: Options.Testrunner = {
@@ -39,7 +42,18 @@ export const config: Options.Testrunner = {
             transpileOnly: true,
             project: 'tsconfig.json'
         }
+    },
+    onPrepare: function (config, capabilities) {
+        if(process.env.ENV === "QA" && fs.existsSync("./allure-results")) {
+            console.log("Erasing the Allure-Result files");
+            // fs.rmdirSync("./allure-results", {recursive: true});
+            fs.rmSync("./allure-results", {recursive:true, force:true});
+        }
+    },
+    afterScenario: function (world, result, context) {
+        allure.addDescription("Description goes here!!!","Overview");
     }
+
 }
 
 

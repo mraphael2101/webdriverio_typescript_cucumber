@@ -7,8 +7,6 @@ w
 G.idea/sonarlint/issuestore/a/1/a123abce010ea7d96fa76c6a9040950b5dac59bc,0/7/07378d44aab5ffb2ca6045200bf934a1485c540c
 w
 G.idea/sonarlint/issuestore/4/1/41501511bb37805640b5b2e922be21c61d048df9,0/5/05df8a9d8f1ef2054c7b3539965f020525f3964b
-=
-tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
 |
 L_01_js_ts_fundamentals/ts/_04_ts_classes_and_interfaces/_01_Class_Example.js,d/e/de1266aa95173df7a6ea4a0bde56ba1f6e7120ed
 |
@@ -21,8 +19,6 @@ s
 C_01_js_ts_fundamentals/ts/_06_ts_decorators/_01_Decorators_Intro.js,7/e/7e271762981b3fdbf6f2912b17c1df691e161974
 s
 C_01_js_ts_fundamentals/ts/_06_ts_decorators/_01_Decorators_Intro.ts,6/2/62e034a69879213213b650c53e6feaa518916edb
-|
-L_01_js_ts_fundamentals/ts/_09_ts_explicit_wait/_01_Explicit_Wait_Example1.ts,2/d/2db015b7b28a52d07a46b4d0f627d81a58276b08
 {
 K_01_js_ts_fundamentals/ts/_05_ts_generics/_01_Generic_Types_And_Promises.js,8/1/81a55404de701f04193b47003c9363180b0b682b
 {

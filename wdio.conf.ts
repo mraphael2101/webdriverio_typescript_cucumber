@@ -26,7 +26,13 @@ export const config: Options.Testrunner = {
     services: ['chromedriver'],
     waitforTimeout: 10000,
     logLevel: "error",
-    reporters:['spec', ['allure', { outputDir: 'allure-results'} ]],
+    reporters:['spec', ['allure',
+        {
+            outputDir: 'allure-results',
+            disableWebdriverStepReporting: true,
+            useCucumberStepReporter:true
+        }]
+    ],
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {

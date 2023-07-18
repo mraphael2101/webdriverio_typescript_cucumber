@@ -16,13 +16,13 @@ Before(async function(scenario) {
 
 Given(/^Google page is opened$/, async function() {
     await browser.url("https://www.google.com");
-    await browser.pause(2000); // implicit wait
+    await browser.pause(2000); // _09a_ts_implicit_wait wait
 });
 
 Given(/^I have landed on the Google HomePage$/, async function () {
     await browser.url("https://www.google.com").then(async function() {
         await browser.getUrl()
-        // implicit: Retry to find element every second
+        // _09a_ts_implicit_wait: Retry to find element every second
         await browser.setTimeout({implicit: 1000, pageLoad: 10000})
     });
 });
@@ -73,7 +73,7 @@ When(/^I search with the keyword (.*)$/, async (searchItem) => {
     console.log(searchItem);
     let ele = await browser.$('[name=q]');
     await ele.setValue(searchItem);
-    await browser.pause(1000); // implicit wait
+    await browser.pause(1000); // _09a_ts_implicit_wait wait
     await browser.keys("Enter");
 });
 

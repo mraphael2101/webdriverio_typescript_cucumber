@@ -1,3 +1,4 @@
+// To support Edge and Chrome, you can use ECMAScript 2015 (ES6) or later
 {
     "compilerOptions": {
         "moduleResolution": "node",
@@ -8,7 +9,7 @@
             "expect-webdriverio",
             "@wdio/cucumber-framework"
         ],
-        "target": "es2022",
+        "target": "ES6",
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true
     }

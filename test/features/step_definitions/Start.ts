@@ -27,7 +27,7 @@ Given(/^I have landed on the Google HomePage$/, async function () {
     });
 });
 
-When('I manipulate cucumber world', async function () {
+When('I manipulate Cucumber World', async function () {
     // Use reflection to pass single instance to PO
     // let options: IWorldOptions;
 

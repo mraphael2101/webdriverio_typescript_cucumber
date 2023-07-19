@@ -13,7 +13,7 @@ export const config: Options.Testrunner = {
         "goog:chromeOptions": {
             args: headless?.toUpperCase() === 'Y' ? ['--headless','--disable-dev-shm-usage','--no-sandbox','--window-size=1920,1080','--disable-gpu'] : []
         },
-        maxInstances: 2,
+        maxInstances: 1,
     }],
     cucumberOpts: {
         require: ['./test/features/step_definitions/*.ts'],

@@ -2,7 +2,7 @@ import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumb
 import * as chai from 'chai';
 import LoginPage from '../../page_objects/GoogleHomePage';
 
-import {MyWorldParams} from "../../helpers/my-world-params";
+import {MyWorldParams} from "../../helpers/MyWorldParams";
 
 setWorldConstructor(MyWorldParams);
 

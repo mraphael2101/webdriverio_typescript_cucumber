@@ -6,15 +6,40 @@ let env = process.env.ENV;
 // console.log(`>> The Test Env flag: ${env}`);
 // console.log(`>> The headless flag: ${headless}`);
 
-export const config: Options.Testrunner = {
 // export const config: WebdriverIO.Config = {
+export const config: Options.Testrunner = {
     capabilities: [{
         browserName: 'chrome',
         "goog:chromeOptions": {
-            args: headless?.toUpperCase() === 'Y' ? ['--headless','--disable-dev-shm-usage','--no-sandbox','--window-size=1920,1080','--disable-gpu'] : []
+            args: headless?.toUpperCase() === 'Y' ? [
+                '--headless',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--window-size=1920,1080',
+                '--disable-gpu'] : []
         },
-        maxInstances: 1,
+        maxInstances: 2,
     }],
+//     capabilities: [{
+//         chrome: {
+//             maxInstances: 2,
+//             browserName: 'chrome',
+//             "goog:chromeOptions": {
+//                 args: headless?.toUpperCase() === 'Y' ? [
+//                     '--headless',
+//                     '--disable-dev-shm-usage',
+//                     '--no-sandbox',
+//                     '--window-size=1920,1080',
+//                     '--disable-gpu'
+//                 ] : []
+//             },
+//         },
+//         edge: {
+//             maxInstances: 2,
+//             browserName: 'MicrosoftEdge',
+//         },
+//         // as any command tells ts to ignore type checking for this object
+//     }] as any,
     cucumberOpts: {
         require: ['./test/features/step_definitions/*.ts'],
         strict: false,

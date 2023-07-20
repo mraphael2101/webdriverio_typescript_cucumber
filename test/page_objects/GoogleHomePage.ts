@@ -14,13 +14,13 @@ export default class GoogleHomePage extends Page {
         super();
     }
 
+    public get searchButton(): Promise<WebdriverIO.Element> {
+        return this.searchButtonEle;
+    }
+
     public open(url: string) {
         console.log("An overridden method")
         return super.open(url);
-    }
-
-    public get searchButton(): Promise<WebdriverIO.Element> {
-        return this.searchButtonEle;
     }
 
     public async search(searchQuery: string) {

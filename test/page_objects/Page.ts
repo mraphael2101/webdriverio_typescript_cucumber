@@ -1,9 +1,9 @@
 /**
-* main page object containing all methods, selectors and functionality
-* that is shared across all page objects
-*/
+ * The inbuilt Page class in WDIO provides a base class for creating page objects.
+ * It provides a number of methods and properties that can be used to interact
+ * with the web page that is shared across all page objects
+ */
 export default class Page {
-    constructor() {}
 
     /**
      * Opens a sub page of the page
@@ -14,7 +14,7 @@ export default class Page {
     }
 
     public async click(ele: WebdriverIO.Element) {
-        await ele.waitForClickable({ timeout: 5000 });
+        await ele.waitForClickable({timeout: 5000});
         if (!ele.elementId) {
             throw Error(ele.error.message);
         }
@@ -22,7 +22,7 @@ export default class Page {
     }
 
     public async typeInto(ele: WebdriverIO.Element, text: string) {
-        await ele.waitForDisplayed({ timeout: 5000 });
+        await ele.waitForDisplayed({timeout: 5000});
         if (!ele.elementId) {
             throw Error(ele.error.message);
         }

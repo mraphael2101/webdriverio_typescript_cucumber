@@ -24,6 +24,7 @@ export default class GoogleHomePage extends Page {
     }
 
     public async search(searchQuery: string) {
+        // await super.typeInto(await this.searchButton, searchQuery);
         await this.searchBarEle.waitForDisplayed({timeout: 5000});
         await this.searchBarEle.setValue(searchQuery);
     }

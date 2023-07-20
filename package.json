@@ -29,5 +29,8 @@
     "headed bdd webint.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_interact'",
     "headed bdd wdiopobj.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wdio_pageobjects'",
     "headless bdd api.feature": "export HEADLESS=Y ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@api'"
+  },
+  "dependencies": {
+    "msedgedriver": "^91.0.0"
   }
 }

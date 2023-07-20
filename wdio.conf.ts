@@ -20,26 +20,26 @@ export const config: Options.Testrunner = {
         },
         maxInstances: 2,
     }],
-//     capabilities: [{
-//         chrome: {
-//             maxInstances: 2,
-//             browserName: 'chrome',
-//             "goog:chromeOptions": {
-//                 args: headless?.toUpperCase() === 'Y' ? [
-//                     '--headless',
-//                     '--disable-dev-shm-usage',
-//                     '--no-sandbox',
-//                     '--window-size=1920,1080',
-//                     '--disable-gpu'
-//                 ] : []
-//             },
-//         },
-//         edge: {
-//             maxInstances: 2,
-//             browserName: 'MicrosoftEdge',
-//         },
-//         // as any command tells ts to ignore type checking for this object
-//     }] as any,
+    // capabilities: [{
+    //     chrome: {
+    //         maxInstances: 2,
+    //         browserName: 'chrome',
+    //         "goog:chromeOptions": {
+    //             args: headless?.toUpperCase() === 'Y' ? [
+    //                 '--headless',
+    //                 '--disable-dev-shm-usage',
+    //                 '--no-sandbox',
+    //                 '--window-size=1920,1080',
+    //                 '--disable-gpu'
+    //             ] : []
+    //         },
+    //     },
+    //     edge: {
+    //         maxInstances: 2,
+    //         browserName: 'MicrosoftEdge',
+    //     },
+    //     // as any command tells ts to ignore type checking for this object
+    // }] as any,
     cucumberOpts: {
         require: ['./test/features/step_definitions/*.ts'],
         strict: false,

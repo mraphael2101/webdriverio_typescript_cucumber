@@ -1,6 +1,7 @@
 import {Options} from "@wdio/types";
 import allure from '@wdio/allure-reporter'
 import * as fs from 'fs'
+
 let headless = process.env.HEADLESS;
 let env = process.env.ENV;
 // console.log(`>> The Test Env flag: ${env}`);
@@ -8,6 +9,10 @@ let env = process.env.ENV;
 
 // export const config: WebdriverIO.Config = {
 export const config: Options.Testrunner = {
+    hostname: 'localhost',
+    port: 9515,
+    path: '/',
+
     capabilities: [{
         browserName: 'chrome',
         "goog:chromeOptions": {
@@ -20,26 +25,26 @@ export const config: Options.Testrunner = {
         },
         maxInstances: 2,
     }],
+
     // capabilities: [{
-    //     chrome: {
-    //         maxInstances: 2,
-    //         browserName: 'chrome',
-    //         "goog:chromeOptions": {
-    //             args: headless?.toUpperCase() === 'Y' ? [
-    //                 '--headless',
-    //                 '--disable-dev-shm-usage',
-    //                 '--no-sandbox',
-    //                 '--window-size=1920,1080',
-    //                 '--disable-gpu'
-    //             ] : []
-    //         },
-    //     },
-    //     edge: {
-    //         maxInstances: 2,
-    //         browserName: 'MicrosoftEdge',
-    //     },
-    //     // as any command tells ts to ignore type checking for this object
-    // }] as any,
+    //     browserName: 'chrome',
+    //     maxInstances: 2,
+    //     "goog:chromeOptions": {
+    //         args: headless?.toUpperCase() === 'Y' ? [
+    //             '--headless',
+    //             '--disable-dev-shm-usage',
+    //             '--no-sandbox',
+    //             '--window-size=1920,1080',
+    //             '--disable-gpu'
+    //         ] : []
+    //     }
+    // },
+    // {
+    //     browserName: 'MicrosoftEdge',
+    //     maxInstances: 2,
+    //     "ms:edgeOptions": {}
+    // }],
+
     cucumberOpts: {
         require: ['./test/features/step_definitions/*.ts'],
         strict: false,
@@ -48,17 +53,16 @@ export const config: Options.Testrunner = {
     specs: [
         './test/features/*/*.feature'
     ],
-    path: 'wd/hub',
     baseUrl: 'http://www.google.com',
     framework: 'cucumber',
-    services: ['chromedriver'],
+    services: ['chromedriver', 'edgedriver'],
     waitforTimeout: 10000,
     logLevel: "error",
-    reporters:['spec', ['allure',
+    reporters: ['spec', ['allure',
         {
             outputDir: 'allure-results',
             disableWebdriverStepReporting: true,
-            useCucumberStepReporter:true
+            useCucumberStepReporter: true
         }]
     ],
     autoCompileOpts: {
@@ -69,18 +73,16 @@ export const config: Options.Testrunner = {
         }
     },
     onPrepare: function (config, capabilities) {
-        if(process.env.ENV === "QA" && fs.existsSync("./allure-results")) {
+        if (process.env.ENV === "QA" && fs.existsSync("./allure-results")) {
             console.log("Erasing the Allure-Result files");
-            fs.rmSync("./allure-results", {recursive:true, force:true});
+            fs.rmSync("./allure-results", {recursive: true, force: true});
         }
     },
     afterScenario: function (world, result, context) {
-        allure.addDescription("Description goes here!!!","Overview");
+        allure.addDescription("Description goes here!!!", "Overview");
     }
 
 }
-
-
 
 
 // import type { Options } from '@wdio/types'

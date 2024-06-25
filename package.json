@@ -17,21 +17,22 @@
     "@wdio/spec-reporter": "^8.12.2",
     "chai": "^4.3.7",
     "chai-as-promised": "^7.1.1",
-    "chromedriver": "^114.0.2",
+    "chromedriver": "^125.0.3",
+    "msedgedriver": "^91.0.0",
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "wdio-chromedriver-service": "^8.1.1",
-    "wdio-edgedriver-service": "^3.0.3"
+    "wdio-edgedriver-service": "^3.0.3",
+    "wdio-geckodriver-service": "^5.0.2"
   },
   "scripts": {
     "wdio run all tests": "wdio run wdio.conf.ts",
-    "headed bdd start.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
-    "headed bdd webint.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_interact'",
-    "headed bdd wdiopobj.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wdio_pageobjects'",
-    "headless bdd api.feature": "export HEADLESS=Y ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@api'"
-  },
-  "dependencies": {
-    "msedgedriver": "^91.0.0"
+    "headless bdd start Chrome": "export BROWSER=chrome MAX_INSTANCE=1 HEADLESS=Y ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
+    "headless bdd start Edge": "export BROWSER=MicrosoftEdge MAX_INSTANCE=1 HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
+    "headless bdd start Firefox": "export BROWSER=firefox MAX_INSTANCE=1 HEADLESS=Y ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_demo'",
+    "headless bdd api.feature": "export HEADLESS=Y ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@api'",
+    "headed bdd ui interactions": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@web_interact'",
+    "headed bdd wdiopobj.feature": "export HEADLESS=N ENV=QA && wdio run wdio.conf.ts --cucumberOpts.tagExpression='@wdio_pageobjects'"
   }
 }

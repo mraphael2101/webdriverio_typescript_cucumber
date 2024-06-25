@@ -2,30 +2,18 @@ import {Options} from "@wdio/types";
 import allure from '@wdio/allure-reporter'
 import * as fs from 'fs'
 
+let browser = process.env.BROWSER;
+let maxInstances = process.env.MAX_INSTANCE;
 let headless = process.env.HEADLESS;
 let env = process.env.ENV;
 // console.log(`>> The Test Env flag: ${env}`);
 // console.log(`>> The headless flag: ${headless}`);
 
-// export const config: WebdriverIO.Config = {
-export const config: Options.Testrunner = {
+export const config: WebdriverIO.Config = {
+// export const config: Options.Testrunner = {
     hostname: 'localhost',
     port: 9515,
     path: '/',
-
-    capabilities: [{
-        browserName: 'chrome',
-        "goog:chromeOptions": {
-            args: headless?.toUpperCase() === 'Y' ? [
-                '--headless',
-                '--disable-dev-shm-usage',
-                '--no-sandbox',
-                '--window-size=1920,1080',
-                '--disable-gpu'] : []
-        },
-        maxInstances: 2,
-    }],
-
     // capabilities: [{
     //     browserName: 'chrome',
     //     maxInstances: 2,
@@ -44,7 +32,31 @@ export const config: Options.Testrunner = {
     //     maxInstances: 2,
     //     "ms:edgeOptions": {}
     // }],
-
+    capabilities: [
+        {
+            browserName: process.env.BROWSER || 'chrome',
+            maxInstances: parseInt(process.env.MAX_INSTANCES || '1'),
+            'goog:chromeOptions': {
+                args: (process.env.BROWSER === 'chrome' && process.env.HEADLESS === 'Y') ? [
+                   '--headless',
+                   '--disable-dev-shm-usage',
+                   '--no-sandbox',
+                   '--window-size=1920,1080',
+                   '--disable-gpu'
+                ] : []
+            },
+            'moz:firefoxOptions': {
+                args: (process.env.BROWSER === 'firefox' && process.env.HEADLESS === 'Y') ? [
+                    '--headless'
+                ] : []
+            },
+            'ms:edgeOptions': {
+                args: (process.env.BROWSER === 'MicrosoftEdge' && process.env.HEADLESS === 'Y') ? [
+                    '--headless'
+                ] : []
+            },
+        },
+    ],
     cucumberOpts: {
         require: ['./test/features/step_definitions/*.ts'],
         strict: false,
@@ -55,7 +67,7 @@ export const config: Options.Testrunner = {
     ],
     baseUrl: 'http://www.google.com',
     framework: 'cucumber',
-    services: ['chromedriver', 'edgedriver'],
+    services: ['chromedriver', 'edgedriver', 'geckodriver'],
     waitforTimeout: 10000,
     logLevel: "error",
     reporters: ['spec', ['allure',

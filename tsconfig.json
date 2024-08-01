@@ -7,19 +7,49 @@
       instead of import * as React from "react" when the module does not explicitly specify a default export1
 */
 
+//{
+//    "compilerOptions": {
+//        "moduleResolution": "node",
+//        "module": "commonjs",
+//        "types": [
+//            "node",
+//            "@wdio/globals/types",
+//            "expect-webdriverio",
+//            "@wdio/cucumber-framework"
+//        ],
+//        "target": "ES6",
+//        "resolveJsonModule": true,
+//        "experimentalDecorators": true,
+//        "allowSyntheticDefaultImports": true
+//    }
+//}
+
 {
     "compilerOptions": {
         "moduleResolution": "node",
         "module": "commonjs",
+        "target": "ES6",
         "types": [
             "node",
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/cucumber-framework"
         ],
-        "target": "ES6",
+        "baseUrl": "./",
+        "paths": {
+            "@pages/*": [
+                "src/pages-actions/web/*",
+                "src/pages-actions/mobile/*"
+            ]
+        },
         "resolveJsonModule": true,
         "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true
-    }
+        "allowSyntheticDefaultImports": true,
+        //     "esModuleInterop": true,
+    },
+    //   "include": ["test/**/*.ts"],
+    "include": ["./src/**/*.ts", "./test/**/*.ts",
+        "./wdio.conf.ts"
+    ],
+    "exclude": ["node_modules"]
 }

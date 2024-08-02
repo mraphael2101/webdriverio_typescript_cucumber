@@ -1,7 +1,8 @@
-import Page from './Page';
+import Page from './page';
+import { $ } from '@wdio/globals';
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub-page containing specific selectors and methods for a specific page
  */
 export default class GoogleHomePage extends Page {
     /**

@@ -38,17 +38,16 @@
         "baseUrl": "./",
         "paths": {
             "@pages/*": [
-                "src/pages-actions/web/*",
-                "src/pages-actions/mobile/*"
+                "main/src/pages-actions/web/*",
+                "main/src/pages-actions/mobile/*"
             ]
         },
         "resolveJsonModule": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        //     "esModuleInterop": true,
     },
-    //   "include": ["test/**/*.ts"],
-    "include": ["./src/**/*.ts", "./test/**/*.ts",
+    "include": ["./src/**/*.ts",
+        "./src/test/**/*.ts",
         "./wdio.conf.ts"
     ],
     "exclude": ["node_modules"]

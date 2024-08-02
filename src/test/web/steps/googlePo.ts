@@ -1,8 +1,9 @@
 import {Before, Given, Then, When, DataTable, setWorldConstructor} from '@cucumber/cucumber';
 import * as chai from 'chai';
-import LoginPage from '../../page_objects/GoogleHomePage';
+import LoginPage from '../../../main/page_objects/web/googleHomePage';
 
-import {MyWorldParams} from "../../helpers/MyWorldParams";
+import {MyWorldParams} from "../../../main/helpers/MyWorldParams";
+import { $, browser } from '@wdio/globals';
 
 setWorldConstructor(MyWorldParams);
 
@@ -22,7 +23,6 @@ Given(/^Google page is opened$/, async function() {
 Given(/^I have landed on the Google HomePage$/, async function () {
     await browser.url("https://www.google.com").then(async function() {
         await browser.getUrl()
-        // _09a_ts_implicit_wait: Retry to find element every second
         await browser.setTimeout({implicit: 1000, pageLoad: 10000})
     });
 });
@@ -69,13 +69,35 @@ Given(/^I setup data$/, function (table: DataTable) {
     console.log(expectedHeaderState)
 });
 
+
+
 When(/^I search with the keyword (.*)$/, async (searchItem) => {
     console.log(searchItem);
-    let ele = await browser.$('[name=q]');
-    await ele.setValue(searchItem);
-    await browser.pause(1000); // _09a_ts_implicit_wait wait
-    await browser.keys("Enter");
+    // Improved waiting strategy
+    const maxAttempts = 1;
+    for (let i = 0; i < maxAttempts; i++) {
+        const searchInput = await $('input[name="q"]');
+        if (await searchInput.isDisplayed()) {
+            await searchInput.click();
+            await searchInput.setValue(searchItem);
+            await browser.keys("Enter");
+            break;
+        }
+        await browser.pause(500);
+    }
 });
+
+When('I click on the first search result', async () => {
+    let ele = await browser.$('h3'); // Try targeting h3 for first search result
+    await ele.click();
+});
+
+Then(/^the URL should match the (.*)$/, async (expectedUrl) => {
+    console.log(expectedUrl);
+    let actualUrl = await browser.getUrl();
+    chai.expect(actualUrl).to.equal(expectedUrl);
+});
+
 
 When('I click on the first search result', async () => {
     let ele = await browser.$('<h3>');

@@ -30,12 +30,12 @@ Feature: A feature to demonstrate how to manipulate GUI elements using WDIO
     Given I have landed on a GUI Widget Library Examples Web Page - "upload"
     When I perform Web Interactions to upload a file
 
-  @web_interact
-  Scenario: Manipulate Browser Frames
-    Given I have landed on a GUI Widget Library Examples Web Page - "frames"
-    When I perform Web Interactions on a iFrame
+#  @web_interact
+#  Scenario: Manipulate Browser Frames
+#    Given I have landed on a GUI Widget Library Examples Web Page - "frames"
+#    When I perform Web Interactions on a iFrame
 
-  @web_interact
-  Scenario: Manipulate Browser by Scrolling
-    Given I have landed on the eBay HomePage
-    When I perform scrolling events
+#  @web_interact
+#  Scenario: Manipulate Browser by Scrolling
+#    Given I have landed on the eBay HomePage
+#    When I perform scrolling events

@@ -1,3 +1,5 @@
+import { browser } from '@wdio/globals';
+
 /**
  * The inbuilt Page class in WDIO provides a base class for creating
  * page objects. It provides a number of methods and properties that
@@ -6,8 +8,8 @@
  */
 export default class Page {
     /**
-     * Opens a sub page of the page
-     * @param path path of the sub page (e.g. /path/to/page.html)
+     * Opens a sub-page of the page
+     * @param path path of the sub-page (e.g. /path/to/page.html)
      */
     public async open(path?: string) {
         return await browser.url('https://www.google.com');
